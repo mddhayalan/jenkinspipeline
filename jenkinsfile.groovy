@@ -21,28 +21,41 @@ pipeline {
                 checkout changelog: false, poll: false, scm: [$class: 'SubversionSCM', additionalCredentials: [],
                  excludedCommitMessages: '', excludedRegions: '', excludedRevprop: '', excludedUsers: '', filterChangelog: false,
                   ignoreDirPropChanges: false, includedRegions: '', locations: [[cancelProcessOnExternalsFail: true, credentialsId: '5f139fb7-9e46-44a7-ac1e-fd010ec54cc4',
-                   depthOption: 'infinity', ignoreExternalsOption: false, local: '.', remote: 'https://svn-01.ta.philips.com/svn/icap-platform/trunk@${params.Revision}']],
+                   depthOption: 'infinity', ignoreExternalsOption: false, local: '.', remote: "https://svn-01.ta.philips.com/svn/icap-platform/trunk@${params.Revision}"]],
                     quietOperation: false, workspaceUpdater: [$class: 'UpdateUpdater']]
             }
         }
-        // stage('Upload Fortify Reports') {
-        //     agent {label 'fortifybuildserver'}
-        //     options {
-        //         timeout(time: 1, unit: 'HOURS')
-        //         timestamps()
-        //     }
-        //     steps{
-        //         script {
-        //             def codebaseNames = ["AII", "AIP", "AppDev", "Build", "Common", "ManagedServices", "SII", "System"]                    
-        //             codebaseNames.each { 
-        //                 codebaseName -> UploadCodebaseFortifyReport(codebaseName)
-        //                 }
-        //             }
+        stage ('Fortify Build and Scan') {
+            agent {label 'fortifybuildserver' }
+            options {
+                timeout(time: 5, unit: 'HOURS')
+                timestamps()
+            }
+            steps {
+                script {
+                    bat """%WORKSPACE%build.bat --server-build --enable-fortify CHK"""
+                }
+            }
+        }
+        stage('Upload Fortify Reports') {
+            agent {label 'fortifybuildserver'}
+            options {
+                timeout(time: 1, unit: 'HOURS')
+                timestamps()
+            }
+            steps{
+                script {
+                    def codebaseNames = ["AII", "AIP", "AppDev", "Build", "Common", "ManagedServices", "SII", "System"]                    
+                    codebaseNames.each { 
+                        codebaseName -> UploadCodebaseFortifyReport(codebaseName)
+                        }
+                    }
                     
-        //         }
-        //     }   
-        // }
+                }
+            }   
+        }
     }
+}
 
 def UploadCodebaseFortifyReport(String codebaseName) {
     script{
