@@ -8,7 +8,7 @@ pipeline {
     }
     environment {
         FORTIFY_URL = "https://fortify.philips.com/ssc"
-        FORTIFY_REPORT_LOCATION = "C:\\Views\\Build_Bmainline\\Output\\Publish\\Fortify\\"
+        FORTIFY_REPORT_LOCATION = "${WORKSPACE}\\Output\\Publish\\Fortify\\"
     }
     stages{
         stage('Checkout/update source code') {
@@ -25,6 +25,18 @@ pipeline {
                     quietOperation: false, workspaceUpdater: [$class: 'UpdateUpdater']]
             }
         }
+        stage ('IPF Build') {
+            agent {label 'fortifybuildserver' }
+            options {
+                timeout(time: 2, unit: 'HOURS')
+                timestamps()
+            }
+            steps {
+                script {
+                    bat """%WORKSPACE%\\build.bat --server-build BIN"""
+                }
+            }
+        }
         stage ('Fortify Build and Scan') {
             agent {label 'fortifybuildserver' }
             options {
@@ -33,7 +45,9 @@ pipeline {
             }
             steps {
                 script {
-                    bat """%WORKSPACE%build.bat --server-build --enable-fortify CHK"""
+                    RunBatch("""%WORKSPACE%\\build_\\build\\vsvars.cmd
+                    msbuild %WORKSPACE%\\build.targets /t:_check /p:EnableFortify=true
+                    """)
                 }
             }
         }
@@ -54,7 +68,6 @@ pipeline {
                 }
             }   
         }
-    }
 }
 
 def UploadCodebaseFortifyReport(String codebaseName) {
