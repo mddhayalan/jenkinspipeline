@@ -8,7 +8,7 @@ pipeline {
     }
     environment {
         FORTIFY_URL = "https://fortify.philips.com/ssc"
-        FORTIFY_REPORT_LOCATION = "${WORKSPACE}\\Output\\Publish\\Fortify\\"
+        FORTIFY_REPORT_LOCATION = "Output\\Publish\\Fortify\\"
     }
     stages{
         stage('Checkout/update source code') {
@@ -45,8 +45,8 @@ pipeline {
             }
             steps {
                 script {
-                    RunBatch("""%WORKSPACE%\\build_\\build\\vsvars.cmd
-                    msbuild %WORKSPACE%\\build.targets /t:_check /p:EnableFortify=true
+                    RunBatch("""call %WORKSPACE%\\build_\\build\\vsvars.cmd
+                    call msbuild %WORKSPACE%\\build.targets /t:_check /p:EnableFortifyCheck=true /p:DisableCodeAnalysis=true /p:UseSharedArtifactoryAuthentication=true /p:CheckLicenseBuild=false /p:DeploymentConfiguration=server
                     """)
                 }
             }
@@ -73,7 +73,7 @@ pipeline {
 def UploadCodebaseFortifyReport(String codebaseName) {
     script{
         withCredentials([string(credentialsId: "FortifyUploadToken-${codebaseName}", variable: 'TOKEN')]) {
-            def reportFile = "${FORTIFY_REPORT_LOCATION}${codebaseName}Scan.fpr"
+            def reportFile = "${WORKSPACE}\\${codebaseName}\\${FORTIFY_REPORT_LOCATION}${codebaseName}Scan.fpr"
             def codebaseVersion = "HSDP-CP-${codebaseName}"
             echo "Uploading: ${reportFile} to ${codebaseVersion}"
             RunBatch("fortifyclient -url ${FORTIFY_URL} -authtoken ${TOKEN} uploadFPR -file ${reportFile} -project HSDP-CP -version ${codebaseVersion}")
