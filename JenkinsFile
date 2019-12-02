@@ -1,0 +1,77 @@
+#!/usr/bin/env groovy
+
+pipeline {
+    agent none
+    options {
+        buildDiscarder(logRotator(daysToKeepStr: '18'))
+    }
+    stages {
+        stage('Parallel stage') {
+            parallel {
+                stage('Parallel stage 1') {
+                    agent {
+                        label 'TestServer'
+                    }
+                    options {timestamps()}
+                    steps {
+                        RunBatch(
+                            """
+                            echo Node ${NODE_NAME} : Executing Parallel stage 1
+                            """
+                        )
+                    }
+                }
+                stage('Parallel stage 2') {
+                    stages {
+                        stage('Sequential stage A') {
+                            agent {
+                                label 'TestServer && WindowsDocker'
+                            }
+                            options {timestamps()}
+                            steps {
+                                RunBatch(
+                                    """
+                                    echo Node ${NODE_NAME} : Executing Sequential stage A
+                                    """
+                                )
+                            }
+                        }
+                        stage('Sequential stage B') {
+                            agent {
+                                label 'TestServer && WindowsDocker'
+                            }
+                            options {timestamps()}
+                            steps {
+                                RunBatch(
+                                    """
+                                    echo Node ${NODE_NAME}: Executing Sequential stage B
+                                    """
+                                )
+                            }
+                        }
+                        stage('Sequential stage C') {
+                            agent {
+                                label 'TestServer && WindowsDocker'
+                            }
+                            options {timestamps()}
+                            steps {
+                                RunBatch(
+                                    """
+                                    echo Node ${NODE_NAME}: Executing Sequential stage C
+                                    """
+                                )
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// Functions
+def RunBatch(String command) {
+    bat returnStatus: false, script:"${command}"
+}
+def RunPowershell(String command) {
+    powershell script: "${command}"
+}

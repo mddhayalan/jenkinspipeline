@@ -1,0 +1,182 @@
+#!/usr/bin/env groovy
+BranchName = env.BRANCH_NAME
+String param_string_cron = BranchName == "develop" ? "H H(21-22) * * * %buildType=TICS" : ""
+
+def MailRecipient = 'grp_hsdp_cancun@Philips.onmicrosoft.com'
+def nodes = '28.0.2 && Android'
+if (BranchName == "develop") {
+    nodes = nodes + " && TICS"
+}
+
+pipeline {
+    agent {
+        node {
+            label nodes
+        }
+    }
+    parameters {
+        choice(choices: 'Normal\nLeakCanary\nTICS\nJAVADocs', description: 'What type of build to build?', name: 'buildType')
+    }
+    triggers {
+        parameterizedCron(param_string_cron)
+    }
+    environment {
+        EPOCH_TIME = sh(script: 'date +%s', returnStdout: true).trim()
+    }
+    options {
+        timestamps()
+        buildDiscarder(logRotator(numToKeepStr: '24'))
+    }
+    stages {
+        stage('Initialize') {
+            steps {
+                echo "Node labels: ${nodes}"
+                sh 'printenv'
+                InitialiseBuild()
+            }
+        }
+
+        stage('Build And Test') {
+            steps {
+                timeout(time: 1, unit: 'HOURS') {
+                    BuildAndUnitTest()
+                }
+            }
+            post {
+                always{
+                    PublishUnitTestsResults()
+                }
+            }
+        }
+
+        stage('Publish to artifactory') {
+            when {
+                allOf {
+                    anyOf { branch 'master'; branch 'develop*'; branch 'release/platform_*' }
+                }
+            }
+            steps {
+                sh '''#!/bin/bash -l
+                    set -e
+                    ./gradlew --full-stacktrace saveResDep saveAllResolvedDependenciesGradleFormat artifactoryPublish
+                '''
+                archiveArtifacts 'Source/obedemoapp/*dependencies*.lock'
+            }
+        }
+
+        stage('java docs') {
+            when {
+                expression { return params.buildType == 'JAVADocs' }
+            }
+            steps {
+                GenerateJavaDocs()
+                PublishJavaDocs()
+                DeployingJavaDocs()
+            }
+        }
+    }
+    post {
+        always{
+            deleteDir()
+            step([$class: 'Mailer', notifyEveryUnstableBuild: true, recipients: MailRecipient, sendToIndividuals: true])
+        }
+    }
+}
+
+def InitialiseBuild() {
+    committerName = sh (script: "git show -s --format='%an' HEAD", returnStdout: true).trim()
+    currentBuild.description = "Submitter: " + committerName + ";Node: ${env.NODE_NAME}"
+    echo currentBuild.description
+
+    if (params.buildType == 'TICS') {
+        currentBuild.displayName = "${env.BUILD_NUMBER}-TICS"
+    }
+
+    echo currentBuild.displayName
+}
+
+def BuildAndUnitTest() {
+    sh '''#!/bin/bash -l
+        set -e
+        chmod -R 755 .
+        ./gradlew --refresh-dependencies --full-stacktrace assembleRelease \
+            :catk:testReleaseUnitTest \
+            :dsc:testReleaseUnitTest \
+            :dscdemo:testReleaseUnitTest \
+            :obedemoapp:testReleaseUnitTest
+    '''
+
+    archiveArtifacts 'Source/obedemoapp/build/outputs/apk/release/*.apk'
+}
+
+def PublishUnitTestsResults() {
+    junit allowEmptyResults: true, testResults: 'Source/obedemoapp/build/test-results/*/*.xml'
+    publishHTML([allowMissing: true, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'Source/obedemoapp/build/reports/tests/testReleaseUnitTest', reportFiles: 'index.html', reportName: 'obedemoapp unit test release'])
+    
+    junit allowEmptyResults: false, testResults: 'Source/catk/build/test-results/**/*.xml'
+    publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'Source/catk/build/reports/tests/testReleaseUnitTest', reportFiles: 'index.html', reportName: 'catk unit test release'])
+
+    junit allowEmptyResults: false,  testResults: 'Source/dsc/build/test-results/**/*.xml'
+    publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'Source/dsc/build/reports/tests/testReleaseUnitTest', reportFiles: 'index.html', reportName: 'dsc unit test release'])
+    
+    junit allowEmptyResults: true, testResults: 'Source/dscdemo/build/test-results/**/*.xml'
+    publishHTML([allowMissing: true, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'Source/dscdemo/build/reports/tests/testReleaseUnitTest', reportFiles: 'index.html', reportName: 'dscdemo unit test release'])
+}
+
+def GenerateJavaDocs(){
+    sh '''#!/bin/bash -l
+        set -e
+        chmod -R 755 .
+        ./gradlew \
+            :dsc:generateJavadocPublicApi \
+            :catk:generateJavadocPublicApi
+    '''
+}
+
+def DeployingJavaDocs() {
+    boolean MasterBranch = (BranchName ==~ /master.*/)
+    boolean ReleaseBranch = (BranchName ==~ /release\/platform_.*/)
+    boolean DevelopBranch = (BranchName ==~ /develop.*/)
+
+    def shellcommand = '''#!/bin/bash -l
+        export BASE_PATH=`pwd`
+        echo $BASE_PATH
+
+        cd $BASE_PATH
+
+        ARTIFACTORY_URL="https://artifactory-ehv.ta.philips.com/artifactory"
+        ARTIFACTORY_REPO="unknown"
+
+        if [ '''+MasterBranch+''' = true ]
+        then
+            ARTIFACTORY_REPO="HSDP-pkgs-android-release"
+        elif [ '''+ReleaseBranch+''' = true ]
+        then
+            ARTIFACTORY_REPO="HSDP-pkgs-android-release"
+        elif [ '''+DevelopBranch+''' = true ]
+        then
+            ARTIFACTORY_REPO="HSDP-pkgs-android-snapshot"
+        else
+            echo "Not published JavaDoc as build is not on a master, develop or release branch" . $BranchName
+        fi
+
+        ./gradlew :dsc:zipJavadoc :catk:zipJavadoc :obedemoapp:printPlatformVersion
+        platformVersion=`xargs < platformversion.txt`
+
+        curl -L -u readerwriter:APBcfHoo7JSz282DWUzMVJfUsah -X PUT $ARTIFACTORY_URL/$ARTIFACTORY_REPO/com/philips/hsdp-dp/catk/$platformVersion/ -T ./Source/catk/Documents/External/catk-api.zip
+        curl -L -u readerwriter:APBcfHoo7JSz282DWUzMVJfUsah -X PUT $ARTIFACTORY_URL/$ARTIFACTORY_REPO/com/philips/hsdp-dp/dsc/$platformVersion/ -T ./Source/dsc/Documents/External/dsc-api.zip
+
+        if [ $? != 0 ]
+        then
+            exit 1
+        else
+            cd $BASE_PATH
+        fi
+    '''
+    sh shellcommand
+}
+
+def PublishJavaDocs(){
+    publishHTML([allowMissing: false, alwaysLinkToLastBuild: true, keepAll: true, reportDir: "Source/catk/Documents/External/catk-api", reportFiles: 'index.html', reportName: "catk Library API documentation"])
+    publishHTML([allowMissing: false, alwaysLinkToLastBuild: true, keepAll: true, reportDir: "Source/dsc/Documents/External/dsc-api", reportFiles: 'index.html', reportName: "dsc Data services Library API documentation"])
+}
