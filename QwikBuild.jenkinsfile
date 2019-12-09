@@ -1,0 +1,59 @@
+pipeline {
+    agent {label 'fortifybuildserver' }
+    options {
+        buildDiscarder(logRotator(daysToKeepStr: '18'))
+    }
+    stages{
+        stage('Get Revisions') {
+            options {
+                timeout(time: 2, unit: 'HOURS')
+                timestamps()
+            }
+            steps  {
+                script {
+                    def revisions = (readFile('revisions.txt')).split("\n")
+                    revisions.each {
+                        revision -> ProcessRevision(revision)
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+def ProcessRevision(String revision) {
+    script {
+        echo "====++++We are gonna checkout revision: ${revision}++++===="
+        CheckoutRevision(revision)
+        //BuildRevision()
+    }
+}
+
+def CheckoutRevision(String revision) {
+    script {
+        checkout changelog: false, 
+                poll: false, 
+                scm: [$class: 'SubversionSCM',
+                additionalCredentials: [],
+                excludedCommitMessages: '',
+                excludedRegions: '',
+                excludedRevprop: '',
+                excludedUsers: '',
+                filterChangelog: false,
+                ignoreDirPropChanges: false,
+                includedRegions: '',
+                locations: [[cancelProcessOnExternalsFail: true,
+                credentialsId: '5f139fb7-9e46-44a7-ac1e-fd010ec54cc4',
+                depthOption: 'infinity',
+                ignoreExternalsOption: false,
+                local: '.',
+                remote: "https://svn-01.ta.philips.com/svn/icap-platform/trunk@${revision}"]],
+                quietOperation: true,
+                workspaceUpdater: [$class: 'CheckoutUpdater']]
+    }
+}
+
+def RunBatch(String command) {
+    bat returnStatus: false, script:"${command}"
+}
