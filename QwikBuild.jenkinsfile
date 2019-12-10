@@ -3,6 +3,9 @@ pipeline {
     options {
         buildDiscarder(logRotator(daysToKeepStr: '18'))
     }
+    parameters {
+        string defaultValue: 'dataset1', description: 'Revision file to read', name: 'RevisionFile', trim: false
+    }
     stages{
         stage('Get Revisions') {
             options {
@@ -11,9 +14,14 @@ pipeline {
             }
             steps  {
                 script {
-                    def revisions = (readFile('revisions.txt')).split("\n")
-                    revisions.each {
-                        revision -> ProcessRevision(revision)
+                    def revisionFile = "C:\\work\\QwikBuild\\${params.RevisionFile}.txt"
+                    def revisions = (readFile("${revisionFile}")).split("\n")
+                    try {
+                        revisions.each {
+                            revision -> ProcessRevision(revision)
+                        }
+                    }catch (err) {
+                        //do nothing lets continue to the next revision
                     }
                 }
 
@@ -26,31 +34,36 @@ def ProcessRevision(String revision) {
     script {
         echo "====++++We are gonna checkout revision: ${revision}++++===="
         CheckoutRevision(revision)
-        //BuildRevision()
+        BuildRevision(revision)
     }
 }
 
 def CheckoutRevision(String revision) {
     script {
-        checkout changelog: false, 
-                poll: false, 
-                scm: [$class: 'SubversionSCM',
-                additionalCredentials: [],
-                excludedCommitMessages: '',
-                excludedRegions: '',
-                excludedRevprop: '',
-                excludedUsers: '',
-                filterChangelog: false,
-                ignoreDirPropChanges: false,
-                includedRegions: '',
-                locations: [[cancelProcessOnExternalsFail: true,
-                credentialsId: '5f139fb7-9e46-44a7-ac1e-fd010ec54cc4',
-                depthOption: 'infinity',
-                ignoreExternalsOption: false,
-                local: '.',
-                remote: "https://svn-01.ta.philips.com/svn/icap-platform/trunk@${revision}"]],
-                quietOperation: true,
-                workspaceUpdater: [$class: 'CheckoutUpdater']]
+        checkout changelog: false,
+        poll: false,
+        scm: [$class: 'SubversionSCM', additionalCredentials: [],
+        excludedCommitMessages: '',
+        excludedRegions: '',
+        excludedRevprop: '',
+        excludedUsers: '',
+        filterChangelog: false,
+        ignoreDirPropChanges: false,
+        includedRegions: '',
+        locations: [[cancelProcessOnExternalsFail: true, credentialsId: '5f139fb7-9e46-44a7-ac1e-fd010ec54cc4',
+        depthOption: 'infinity', ignoreExternalsOption: true,
+        local: '.', remote: "https://svn-01.ta.philips.com/svn/icap-platform/trunk@${revision}"]],
+        quietOperation: false,
+        workspaceUpdater: [$class: 'UpdateUpdater']]
+    }
+}
+
+def BuildRevision(String revision) {
+    script {
+        def quickBuild = "C:\\work\\QwikBuild\\QuikcBuild.bat"
+        echo "Running: ${quickBuild} ${WORKSPACE} ${revision}"
+        RunBatch(""" call ${quickBuild} ${WORKSPACE} ${revision}
+    """)
     }
 }
 
