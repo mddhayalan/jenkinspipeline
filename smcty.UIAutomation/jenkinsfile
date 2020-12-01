@@ -1,0 +1,38 @@
+pipeline {
+    agent {label 'UATAgent' }
+    options {
+        buildDiscarder(logRotator(daysToKeepStr: '18'))
+    }
+    stages
+    {
+        stage('Run UI Tests') 
+        {
+            agent {label 'UATConsoleAgent'}
+            options {
+                timeout(time: 3, unit: 'HOURS')
+                timestamps()
+            }
+            steps  {
+                bat returnStdout: true, script: '''cd C:\\Jenkins\\UATAgent\\workspace\\SmartCity_UI_Automation\\UIATWorkspace\\SeleniumTool
+                                                    call seleniumServer.bat
+                                                    cd C:\\Jenkins\\UATAgent\\workspace\\SmartCity_UI_Automation\\UIATWorkspace\\SeleniumTool
+                                                    call seleniumNode.bat'''
+                dir('C:\\Jenkins\\UATAgent\\workspace\\SmartCity_UI_Automation\\UIATWorkspace\\BDDFramework\\BDDFramework'){
+                   RunBatch("mvn exec:java -Dsurefire.rerunFailingTestsCount=0")
+                }                
+            }
+            post {
+                always {
+                        cucumber reportTitle: 'UI Test report',
+                        jsonReportDirectory: 'UIATWorkspace\\BDDFramework\\BDDFramework\\src\\test\\resources\\Execution_Folder\\Json\\',
+                        fileIncludePattern: '**/*RunnerClass.json',
+                        trendsLimit: 100
+                    }
+            }
+        }
+    }
+}
+
+def RunBatch(String command) {
+    bat returnStatus: false, script:"${command}"
+}

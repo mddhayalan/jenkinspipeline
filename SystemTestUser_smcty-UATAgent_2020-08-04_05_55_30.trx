@@ -1,0 +1,854 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="36506dc9-e97b-42fd-8980-37d99ab66f54" name="SystemTestUser@smcty-UATAgent 2020-08-04 05:55:30" runUser="smcty-UATAgent\SystemTestUser" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2020-08-04T05:55:30.7994536+00:00" queuing="2020-08-04T05:55:30.7994547+00:00" start="2020-08-04T05:55:26.9020479+00:00" finish="2020-08-04T05:55:31.2564043+00:00" />
+  <TestSettings name="default" id="69a34c60-811c-4a87-beef-52f1f379a561">
+    <Deployment runDeploymentRoot="SystemTestUser_smcty-UATAgent_2020-08-04_05_55_30" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="bda71a02-38c7-42c3-b8e6-9f3a859b853a" testId="614a5efd-0672-5f3d-9ebe-31fa82333091" testName="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAssetTelemetry_Negative_MissingParam" computerName="smcty-UATAgent" duration="00:00:00.0069776" startTime="2020-08-04T05:55:30.8712537+00:00" endTime="2020-08-04T05:55:30.8712551+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bda71a02-38c7-42c3-b8e6-9f3a859b853a">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Equal() Failure&#xD;
+Expected: BadRequest&#xD;
+Actual:   NotFound</Message>
+          <StackTrace>   at SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAssetTelemetry_Negative_MissingParam() in /repo/src/test/integration/SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests/AssetTests.cs:line 528&#xD;
+--- End of stack trace from previous location where exception was thrown ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="b86d048a-e753-4f63-8d71-0dbbb9c12162" testId="5447f736-b30b-935b-caad-c646bd01d4fa" testName="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAssetTypeStatusCount_Positive" computerName="smcty-UATAgent" duration="00:00:00.0096388" startTime="2020-08-04T05:55:30.9746728+00:00" endTime="2020-08-04T05:55:30.9746744+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b86d048a-e753-4f63-8d71-0dbbb9c12162">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Equal() Failure&#xD;
+Expected: OK&#xD;
+Actual:   BadRequest</Message>
+          <StackTrace>   at SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAssetTypeStatusCount_Positive() in /repo/src/test/integration/SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests/AssetTests.cs:line 292&#xD;
+--- End of stack trace from previous location where exception was thrown ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="c6b08cee-a1df-4022-832e-670d4a29f9bf" testId="aae64a0c-0df5-bf06-3b15-ed5965d200e1" testName="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAssociatedAssets_Positive" computerName="smcty-UATAgent" duration="00:00:00.0119215" startTime="2020-08-04T05:55:30.9633052+00:00" endTime="2020-08-04T05:55:30.9633066+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c6b08cee-a1df-4022-832e-670d4a29f9bf">
+      <Output>
+        <ErrorInfo>
+          <Message>System.ArgumentNullException : Value cannot be null. (Parameter 'source')</Message>
+          <StackTrace>   at System.Linq.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)&#xD;
+   at System.Linq.Enumerable.ElementAt[TSource](IEnumerable`1 source, Int32 index)&#xD;
+   at SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAssociatedAssets_Positive() in /repo/src/test/integration/SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests/AssetTests.cs:line 337&#xD;
+--- End of stack trace from previous location where exception was thrown ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="0a1b95f5-eb71-46b2-8c6e-458620b6bc3f" testId="bbd515f4-f529-b6fb-8f9d-d7e065d3962c" testName="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAssociatedAssets_Negative_IncorrectAssetID" computerName="smcty-UATAgent" duration="00:00:00.0082594" startTime="2020-08-04T05:55:30.7669096+00:00" endTime="2020-08-04T05:55:30.7669107+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0a1b95f5-eb71-46b2-8c6e-458620b6bc3f">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Equal() Failure&#xD;
+Expected: BadRequest&#xD;
+Actual:   NotFound</Message>
+          <StackTrace>   at SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAssociatedAssets_Negative_IncorrectAssetID() in /repo/src/test/integration/SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests/AssetTests.cs:line 364&#xD;
+--- End of stack trace from previous location where exception was thrown ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="f2f88e2c-0db5-4e87-9602-882f263441ac" testId="a5de3c89-f9fd-e96a-bf60-1181b1701f04" testName="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlertById_Positive" computerName="smcty-UATAgent" duration="00:00:00.0092390" startTime="2020-08-04T05:55:31.1169379+00:00" endTime="2020-08-04T05:55:31.1169398+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f2f88e2c-0db5-4e87-9602-882f263441ac">
+      <Output>
+        <ErrorInfo>
+          <Message>System.ArgumentNullException : Value cannot be null. (Parameter 'source')</Message>
+          <StackTrace>   at System.Linq.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)&#xD;
+   at System.Linq.Enumerable.Any[TSource](IEnumerable`1 source)&#xD;
+   at SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlertById_Positive() in /repo/src/test/integration/SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests/AlertTests.cs:line 153&#xD;
+--- End of stack trace from previous location where exception was thrown ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="a29f9270-fef8-4b0c-be6a-3a035adaa8df" testId="115ef09a-aa55-ae3b-581a-cbbf0d5e59e9" testName="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAssetTelemetry_Negative_EmptyParam" computerName="smcty-UATAgent" duration="00:00:00.0062863" startTime="2020-08-04T05:55:30.8546602+00:00" endTime="2020-08-04T05:55:30.8546616+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a29f9270-fef8-4b0c-be6a-3a035adaa8df">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Equal() Failure&#xD;
+Expected: BadRequest&#xD;
+Actual:   NotFound</Message>
+          <StackTrace>   at SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAssetTelemetry_Negative_EmptyParam() in /repo/src/test/integration/SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests/AssetTests.cs:line 510&#xD;
+--- End of stack trace from previous location where exception was thrown ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="aa67d558-bc70-4eac-a325-2b872c56534f" testId="e494ab53-436b-991b-2f2a-ecd7218deff6" testName="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlertById_IncorrectDataType_AlertId" computerName="smcty-UATAgent" duration="00:00:00.0077774" startTime="2020-08-04T05:55:31.1242591+00:00" endTime="2020-08-04T05:55:31.1242608+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="aa67d558-bc70-4eac-a325-2b872c56534f" />
+    <UnitTestResult executionId="0152347d-c23b-45d3-b453-57980799d838" testId="fd887fa1-c235-9f18-e228-a681c0b13e39" testName="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAllAssets_Negative_MissingParam_MaxResults" computerName="smcty-UATAgent" duration="00:00:00.0116250" startTime="2020-08-04T05:55:30.8395558+00:00" endTime="2020-08-04T05:55:30.8395570+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0152347d-c23b-45d3-b453-57980799d838" />
+    <UnitTestResult executionId="5a771cad-b6e6-492f-b637-65f362aca900" testId="4bd30d55-d6f4-d7ac-0458-d08934598d6c" testName="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAsetTelemetry_Negative_InvalidDatatype" computerName="smcty-UATAgent" duration="00:00:00.0143859" startTime="2020-08-04T05:55:30.7525806+00:00" endTime="2020-08-04T05:55:30.7525818+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5a771cad-b6e6-492f-b637-65f362aca900">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Equal() Failure&#xD;
+Expected: BadRequest&#xD;
+Actual:   NotFound</Message>
+          <StackTrace>   at SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAsetTelemetry_Negative_InvalidDatatype() in /repo/src/test/integration/SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests/AssetTests.cs:line 491&#xD;
+--- End of stack trace from previous location where exception was thrown ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="bd8ba668-7a81-4968-afea-dd62b251ac56" testId="a7582682-174e-083c-831e-c52a61e254c8" testName="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlertTypesByAlertTypeId_MissingParam" computerName="smcty-UATAgent" duration="00:00:00.0089287" startTime="2020-08-04T05:55:31.0987846+00:00" endTime="2020-08-04T05:55:31.0987864+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bd8ba668-7a81-4968-afea-dd62b251ac56" />
+    <UnitTestResult executionId="3a0d33c7-7909-44e7-8d1b-09ab323fdb0c" testId="8f452ca7-080e-f371-30d0-51bb19defb7d" testName="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAssetTelemetry_Negative_IncorrectAssetID" computerName="smcty-UATAgent" duration="00:00:00.0119267" startTime="2020-08-04T05:55:30.9018135+00:00" endTime="2020-08-04T05:55:30.9018150+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3a0d33c7-7909-44e7-8d1b-09ab323fdb0c">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Equal() Failure&#xD;
+Expected: BadRequest&#xD;
+Actual:   NotFound</Message>
+          <StackTrace>   at SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAssetTelemetry_Negative_IncorrectAssetID() in /repo/src/test/integration/SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests/AssetTests.cs:line 472&#xD;
+--- End of stack trace from previous location where exception was thrown ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="f7cb86bf-53c5-4070-b5d5-2f4df8409cd2" testId="b48da210-1977-d69d-42a1-e474d2b9f182" testName="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlertTypesByCategory_Incorrect_DataType_CategoryId" computerName="smcty-UATAgent" duration="00:00:00.0211128" startTime="2020-08-04T05:55:30.8439672+00:00" endTime="2020-08-04T05:55:30.8439685+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f7cb86bf-53c5-4070-b5d5-2f4df8409cd2" />
+    <UnitTestResult executionId="0a64d972-b107-426b-9299-a32e2452bdc3" testId="908475a9-f4d1-cd49-a011-3f676bc8d98f" testName="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAsetByID_Positive" computerName="smcty-UATAgent" duration="00:00:00.0251811" startTime="2020-08-04T05:55:30.8152668+00:00" endTime="2020-08-04T05:55:30.8152687+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0a64d972-b107-426b-9299-a32e2452bdc3">
+      <Output>
+        <ErrorInfo>
+          <Message>System.ArgumentNullException : Value cannot be null. (Parameter 'source')</Message>
+          <StackTrace>   at System.Linq.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)&#xD;
+   at System.Linq.Enumerable.ElementAt[TSource](IEnumerable`1 source, Int32 index)&#xD;
+   at SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAsetByID_Positive() in /repo/src/test/integration/SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests/AssetTests.cs:line 192&#xD;
+--- End of stack trace from previous location where exception was thrown ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="3797b88b-1834-44b0-a466-0fd7246e3667" testId="092ce2d2-676a-ecc4-356d-684f87436df4" testName="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAssociatedAssets_Negative_MissingParam" computerName="smcty-UATAgent" duration="00:00:00.0143164" startTime="2020-08-04T05:55:30.7331689+00:00" endTime="2020-08-04T05:55:30.7331691+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3797b88b-1834-44b0-a466-0fd7246e3667" />
+    <UnitTestResult executionId="0c1dad3c-d54b-43cb-8e58-9cf9d69baec6" testId="0c71635a-df38-1dc9-9899-8cf2091aef13" testName="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlerts_Positive" computerName="smcty-UATAgent" duration="00:00:00.0085914" startTime="2020-08-04T05:55:30.8721217+00:00" endTime="2020-08-04T05:55:30.8721234+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0c1dad3c-d54b-43cb-8e58-9cf9d69baec6">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Equal() Failure&#xD;
+Expected: OK&#xD;
+Actual:   BadRequest</Message>
+          <StackTrace>   at SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlerts_Positive() in /repo/src/test/integration/SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests/AlertTests.cs:line 50&#xD;
+--- End of stack trace from previous location where exception was thrown ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="4f795cb0-1d93-45ab-bc94-c08f42cdaad9" testId="1bab4c9c-3190-6e83-e304-040ea3848745" testName="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAssetByID_Negative_NullForAssetId" computerName="smcty-UATAgent" duration="00:00:00.0092058" startTime="2020-08-04T05:55:30.9107637+00:00" endTime="2020-08-04T05:55:30.9107652+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4f795cb0-1d93-45ab-bc94-c08f42cdaad9" />
+    <UnitTestResult executionId="e49ba845-59dc-41df-be93-846c5b23873d" testId="b87544c3-7a91-8415-f2e8-29dcd6dbbad0" testName="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlertsCountByPriority_MissingParam_JurId" computerName="smcty-UATAgent" duration="00:00:00.0082090" startTime="2020-08-04T05:55:30.7413870+00:00" endTime="2020-08-04T05:55:30.7413883+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e49ba845-59dc-41df-be93-846c5b23873d" />
+    <UnitTestResult executionId="064bfb1e-ba53-4f3c-9813-aac7e67b439a" testId="d0136157-ea3d-ebf1-95e0-7861e2a71a8f" testName="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlertTypesByAlertTypeId_Incorrect_DataType" computerName="smcty-UATAgent" duration="00:00:00.0422141" startTime="2020-08-04T05:55:30.8227341+00:00" endTime="2020-08-04T05:55:30.8227355+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="064bfb1e-ba53-4f3c-9813-aac7e67b439a" />
+    <UnitTestResult executionId="1510d106-a7f7-42f0-bfa6-d8a6abeaeab6" testId="251a2008-2dfc-accf-7356-c210ec045a55" testName="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlerts_Incorrect_JurId" computerName="smcty-UATAgent" duration="00:00:00.0117950" startTime="2020-08-04T05:55:31.1371979+00:00" endTime="2020-08-04T05:55:31.1371992+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1510d106-a7f7-42f0-bfa6-d8a6abeaeab6">
+      <Output>
+        <ErrorInfo>
+          <Message>System.ArgumentNullException : Value cannot be null. (Parameter 'source')</Message>
+          <StackTrace>   at System.Linq.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)&#xD;
+   at System.Linq.Enumerable.Any[TSource](IEnumerable`1 source)&#xD;
+   at SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlerts_Incorrect_JurId() in /repo/src/test/integration/SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests/AlertTests.cs:line 96&#xD;
+--- End of stack trace from previous location where exception was thrown ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="c185b5f6-5010-47e6-b22a-1a0feda29836" testId="d7c5b6d4-d12b-66fc-311b-b5e0cf285cad" testName="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlertsCountByPriority_Positive" computerName="smcty-UATAgent" duration="00:00:00.0120673" startTime="2020-08-04T05:55:30.9898813+00:00" endTime="2020-08-04T05:55:30.9898835+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c185b5f6-5010-47e6-b22a-1a0feda29836">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Equal() Failure&#xD;
+Expected: OK&#xD;
+Actual:   BadRequest</Message>
+          <StackTrace>   at SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlertsCountByPriority_Positive() in /repo/src/test/integration/SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests/AlertTests.cs:line 225&#xD;
+--- End of stack trace from previous location where exception was thrown ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="c6a35d52-9507-4513-9429-64e2266b1350" testId="458f16e9-f3fa-8ce7-58cf-3bcb2fb73092" testName="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAssetByID_MissingParameterForAssetId" computerName="smcty-UATAgent" duration="00:00:00.0124204" startTime="2020-08-04T05:55:30.5562277+00:00" endTime="2020-08-04T05:55:30.5562293+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c6a35d52-9507-4513-9429-64e2266b1350" />
+    <UnitTestResult executionId="135a3122-2ebe-4d67-84eb-c8895f0440e1" testId="fe6cdd7d-6568-89ae-e003-eba92de4894b" testName="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAssociatedAssets_Negative_InvalidDatatype" computerName="smcty-UATAgent" duration="00:00:00.0265557" startTime="2020-08-04T05:55:30.7886644+00:00" endTime="2020-08-04T05:55:30.7886659+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="135a3122-2ebe-4d67-84eb-c8895f0440e1">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Equal() Failure&#xD;
+Expected: BadRequest&#xD;
+Actual:   NotFound</Message>
+          <StackTrace>   at SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAssociatedAssets_Negative_InvalidDatatype() in /repo/src/test/integration/SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests/AssetTests.cs:line 383&#xD;
+--- End of stack trace from previous location where exception was thrown ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="630e7ea5-3c71-4760-87df-a6dae186af85" testId="f9f427a2-366e-480f-958c-fb4609121058" testName="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlertsCountByStatus_Positive" computerName="smcty-UATAgent" duration="00:00:00.0089397" startTime="2020-08-04T05:55:30.9541728+00:00" endTime="2020-08-04T05:55:30.9541745+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="630e7ea5-3c71-4760-87df-a6dae186af85">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Equal() Failure&#xD;
+Expected: OK&#xD;
+Actual:   BadRequest</Message>
+          <StackTrace>   at SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlertsCountByStatus_Positive() in /repo/src/test/integration/SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests/AlertTests.cs:line 306&#xD;
+--- End of stack trace from previous location where exception was thrown ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="80fa464f-374e-4112-b627-142672bd3817" testId="9cf580eb-e029-4504-464f-b1efdae43d33" testName="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAllAssets_Positive" computerName="smcty-UATAgent" duration="00:00:00.0192360" startTime="2020-08-04T05:55:30.9307137+00:00" endTime="2020-08-04T05:55:30.9307151+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="80fa464f-374e-4112-b627-142672bd3817">
+      <Output>
+        <ErrorInfo>
+          <Message>System.IO.DirectoryNotFoundException : Could not find a part of the path 'C:\Users\Expected\GetAllAssets.json'.</Message>
+          <StackTrace>   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)&#xD;
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)&#xD;
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)&#xD;
+   at System.IO.StreamReader.ValidateArgsAndOpenPath(String path, Encoding encoding, Int32 bufferSize)&#xD;
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks)&#xD;
+   at System.IO.File.InternalReadAllText(String path, Encoding encoding)&#xD;
+   at System.IO.File.ReadAllText(String path)&#xD;
+   at SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAllAssets_Positive() in /repo/src/test/integration/SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests/AssetTests.cs:line 102&#xD;
+--- End of stack trace from previous location where exception was thrown ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="9085f585-8310-4b11-b086-d03aa4f9e10f" testId="5115355a-79c0-7f9c-66f5-00587ba3537d" testName="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAssetByID_Negative_IncorrectAssetID" computerName="smcty-UATAgent" duration="00:00:00.0075283" startTime="2020-08-04T05:55:30.8892075+00:00" endTime="2020-08-04T05:55:30.8892091+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9085f585-8310-4b11-b086-d03aa4f9e10f">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Equal() Failure&#xD;
+Expected: BadRequest&#xD;
+Actual:   NotFound</Message>
+          <StackTrace>   at SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAssetByID_Negative_IncorrectAssetID() in /repo/src/test/integration/SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests/AssetTests.cs:line 217&#xD;
+--- End of stack trace from previous location where exception was thrown ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="9a2d5af0-607f-41ca-8cfd-598130e1bb1c" testId="34451070-4901-3c56-1dc1-0ba28f72c6cf" testName="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlertsCategories_Positive" computerName="smcty-UATAgent" duration="00:00:00.0113843" startTime="2020-08-04T05:55:31.0021146+00:00" endTime="2020-08-04T05:55:31.0021165+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9a2d5af0-607f-41ca-8cfd-598130e1bb1c">
+      <Output>
+        <ErrorInfo>
+          <Message>System.IO.DirectoryNotFoundException : Could not find a part of the path 'C:\Users\Expected\AlertCategories.json'.</Message>
+          <StackTrace>   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)&#xD;
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)&#xD;
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)&#xD;
+   at System.IO.StreamReader.ValidateArgsAndOpenPath(String path, Encoding encoding, Int32 bufferSize)&#xD;
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks)&#xD;
+   at System.IO.File.InternalReadAllText(String path, Encoding encoding)&#xD;
+   at System.IO.File.ReadAllText(String path)&#xD;
+   at SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlertsCategories_Positive() in /repo/src/test/integration/SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests/AlertTests.cs:line 388&#xD;
+--- End of stack trace from previous location where exception was thrown ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="a09b4010-a864-4864-af6a-41e12895d5c9" testId="3055b284-c8dd-2141-6d99-5ff19a3c283e" testName="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlerts_MissingParam_Maxresults" computerName="smcty-UATAgent" duration="00:00:00.0125369" startTime="2020-08-04T05:55:31.0814618+00:00" endTime="2020-08-04T05:55:31.0814633+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a09b4010-a864-4864-af6a-41e12895d5c9" />
+    <UnitTestResult executionId="a7068107-5d7d-4ef3-aa96-4ff936479be5" testId="a157dd5b-c408-327f-05ca-5ca8ca18f0e3" testName="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAllAssets_Negative_MaxResults_IncorrectDatatype" computerName="smcty-UATAgent" duration="00:00:00.0139409" startTime="2020-08-04T05:55:30.8278460+00:00" endTime="2020-08-04T05:55:30.8278472+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a7068107-5d7d-4ef3-aa96-4ff936479be5" />
+    <UnitTestResult executionId="d2cb4a37-28d4-48b8-b45a-e99314f1c907" testId="822729e9-30b7-e451-50b5-3f1118a3fb99" testName="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAllAssets_Negative_EmptyParam_MaxResults" computerName="smcty-UATAgent" duration="00:00:00.0095575" startTime="2020-08-04T05:55:30.8804564+00:00" endTime="2020-08-04T05:55:30.8804567+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d2cb4a37-28d4-48b8-b45a-e99314f1c907" />
+    <UnitTestResult executionId="38d176ec-51b5-44e7-8c3b-3ee4d6c0a10c" testId="7221e86c-5d5d-bd7e-fc93-0b4acc19ef64" testName="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAssetTelemetry_Positive" computerName="smcty-UATAgent" duration="00:00:00.0081187" startTime="2020-08-04T05:55:30.8630898+00:00" endTime="2020-08-04T05:55:30.8630910+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="38d176ec-51b5-44e7-8c3b-3ee4d6c0a10c">
+      <Output>
+        <ErrorInfo>
+          <Message>System.ArgumentNullException : Value cannot be null. (Parameter 'source')</Message>
+          <StackTrace>   at System.Linq.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)&#xD;
+   at System.Linq.Enumerable.ElementAt[TSource](IEnumerable`1 source, Int32 index)&#xD;
+   at SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAssetTelemetry_Positive() in /repo/src/test/integration/SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests/AssetTests.cs:line 446&#xD;
+--- End of stack trace from previous location where exception was thrown ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="d16a8e23-faa5-4014-a3d5-25c3dbcd1175" testId="cbb6ebb5-9d86-b2fd-33fb-df0dd30f1c13" testName="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlertTypesByCategory_Positive" computerName="smcty-UATAgent" duration="00:00:00.0089050" startTime="2020-08-04T05:55:31.0112298+00:00" endTime="2020-08-04T05:55:31.0112312+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d16a8e23-faa5-4014-a3d5-25c3dbcd1175">
+      <Output>
+        <ErrorInfo>
+          <Message>System.ArgumentNullException : Value cannot be null. (Parameter 'source')</Message>
+          <StackTrace>   at System.Linq.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)&#xD;
+   at System.Linq.Enumerable.Any[TSource](IEnumerable`1 source)&#xD;
+   at SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlertTypesByCategory_Positive() in /repo/src/test/integration/SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests/AlertTests.cs:line 424&#xD;
+--- End of stack trace from previous location where exception was thrown ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="0d89e952-24a1-43e9-bdd8-5700d84a7608" testId="25978b66-54ac-f93c-ba7c-33e9f6fe8b73" testName="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlerts_Incorrect_DataType_JurId" computerName="smcty-UATAgent" duration="00:00:00.0175237" startTime="2020-08-04T05:55:30.8616745+00:00" endTime="2020-08-04T05:55:30.8616759+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0d89e952-24a1-43e9-bdd8-5700d84a7608" />
+    <UnitTestResult executionId="ba3c5647-a8ad-408c-b44c-f6ae1204d1e1" testId="b0e4dd2e-c51f-e8e3-5793-aeef3174d2d1" testName="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAllAssetTypes_Negative_IncorrectVesion" computerName="smcty-UATAgent" duration="00:00:00.0089310" startTime="2020-08-04T05:55:30.9820365+00:00" endTime="2020-08-04T05:55:30.9820380+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ba3c5647-a8ad-408c-b44c-f6ae1204d1e1" />
+    <UnitTestResult executionId="9268e53a-e1bb-4a70-86f8-355c525f3319" testId="0b2c88b3-14db-32f4-81b4-059a412c99f7" testName="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.DelAbandonAlert_Incorrect_DataType" computerName="smcty-UATAgent" duration="00:00:00.0218272" startTime="2020-08-04T05:55:30.9751063+00:00" endTime="2020-08-04T05:55:30.9751077+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9268e53a-e1bb-4a70-86f8-355c525f3319" />
+    <UnitTestResult executionId="87e5b773-9d41-495a-bbf0-060306ae41d5" testId="74c6ef43-05de-710f-7332-c2ef84a960e0" testName="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlertsCountByStatus_Incorrect_DataType_JurId" computerName="smcty-UATAgent" duration="00:00:00.0080138" startTime="2020-08-04T05:55:31.0896567+00:00" endTime="2020-08-04T05:55:31.0896581+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="87e5b773-9d41-495a-bbf0-060306ae41d5" />
+    <UnitTestResult executionId="b7055664-2e89-4ea0-9d01-2d8b18ff92f5" testId="acad223b-7791-61fc-8bab-2d841d71f1e8" testName="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlertTypesByAlertTypeId_Positive" computerName="smcty-UATAgent" duration="00:00:00.0084319" startTime="2020-08-04T05:55:30.9360822+00:00" endTime="2020-08-04T05:55:30.9360838+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b7055664-2e89-4ea0-9d01-2d8b18ff92f5">
+      <Output>
+        <ErrorInfo>
+          <Message>System.ArgumentNullException : Value cannot be null. (Parameter 'source')</Message>
+          <StackTrace>   at System.Linq.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)&#xD;
+   at System.Linq.Enumerable.Any[TSource](IEnumerable`1 source)&#xD;
+   at SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlertTypesByAlertTypeId_Positive() in /repo/src/test/integration/SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests/AlertTests.cs:line 532&#xD;
+--- End of stack trace from previous location where exception was thrown ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="6922b34a-7908-4c88-b6d2-4d4de5cfa27c" testId="0056d20d-676b-c356-48b2-94938005a756" testName="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlertsCountByPriority_IncorrectDataType_JurId" computerName="smcty-UATAgent" duration="00:00:00.0075401" startTime="2020-08-04T05:55:31.1064113+00:00" endTime="2020-08-04T05:55:31.1064129+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6922b34a-7908-4c88-b6d2-4d4de5cfa27c" />
+    <UnitTestResult executionId="6dfae478-b98a-43a7-b817-0754adfb0828" testId="6d2b15f9-8ea5-58ff-2b00-83896727d46b" testName="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlertTypesByAlertTypeId_IncorrectId" computerName="smcty-UATAgent" duration="00:00:00.0077624" startTime="2020-08-04T05:55:30.7675354+00:00" endTime="2020-08-04T05:55:30.7675364+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6dfae478-b98a-43a7-b817-0754adfb0828">
+      <Output>
+        <ErrorInfo>
+          <Message>System.ArgumentNullException : Value cannot be null. (Parameter 'source')</Message>
+          <StackTrace>   at System.Linq.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)&#xD;
+   at System.Linq.Enumerable.Any[TSource](IEnumerable`1 source)&#xD;
+   at SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlertTypesByAlertTypeId_IncorrectId() in /repo/src/test/integration/SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests/AlertTests.cs:line 568&#xD;
+--- End of stack trace from previous location where exception was thrown ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="290912fa-1e05-4988-a301-aaddba9d7687" testId="10961464-bece-20d9-1d58-2529715ed855" testName="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlertsCountByPriority_Incorrect_JurId" computerName="smcty-UATAgent" duration="00:00:00.0111838" startTime="2020-08-04T05:55:30.7331083+00:00" endTime="2020-08-04T05:55:30.7331096+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="290912fa-1e05-4988-a301-aaddba9d7687" />
+    <UnitTestResult executionId="09a9b54c-8d92-4b58-8904-26d744c51583" testId="e359fe45-a395-3c86-3698-5e08559fe209" testName="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlertById_Incorrect_AlertId" computerName="smcty-UATAgent" duration="00:00:00.0563600" startTime="2020-08-04T05:55:31.0717712+00:00" endTime="2020-08-04T05:55:31.0717736+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="09a9b54c-8d92-4b58-8904-26d744c51583">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Equal() Failure&#xD;
+Expected: NoContent&#xD;
+Actual:   NotFound</Message>
+          <StackTrace>   at SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlertById_Incorrect_AlertId() in /repo/src/test/integration/SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests/AlertTests.cs:line 183&#xD;
+--- End of stack trace from previous location where exception was thrown ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="bab4f30c-3ecb-4dd7-a34a-72078d889c30" testId="e3be6ee5-24bd-7c21-4307-9797dd3292cc" testName="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.DelAbandonAlert_MissingParam" computerName="smcty-UATAgent" duration="00:00:00.0463900" startTime="2020-08-04T05:55:30.9257992+00:00" endTime="2020-08-04T05:55:30.9258008+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bab4f30c-3ecb-4dd7-a34a-72078d889c30" />
+    <UnitTestResult executionId="350990f5-88f3-4319-8bf7-cccf5ce93578" testId="c71887c0-1842-8881-3958-04eb38a80d08" testName="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAssetByID_Negative_InvalidDataTypeForAssetId" computerName="smcty-UATAgent" duration="00:00:00.0067139" startTime="2020-08-04T05:55:30.8475847+00:00" endTime="2020-08-04T05:55:30.8475862+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="350990f5-88f3-4319-8bf7-cccf5ce93578">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Equal() Failure&#xD;
+Expected: BadRequest&#xD;
+Actual:   NotFound</Message>
+          <StackTrace>   at SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAssetByID_Negative_InvalidDataTypeForAssetId() in /repo/src/test/integration/SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests/AssetTests.cs:line 234&#xD;
+--- End of stack trace from previous location where exception was thrown ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="a8cbea4b-73ef-4f73-bb4f-9f0680aa1d3b" testId="47d2bfbc-a4ca-a550-38f2-dadd95152ef0" testName="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlertsCountByStatus_IncorrectJurId" computerName="smcty-UATAgent" duration="00:00:00.0084225" startTime="2020-08-04T05:55:30.9436745+00:00" endTime="2020-08-04T05:55:30.9436759+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a8cbea4b-73ef-4f73-bb4f-9f0680aa1d3b" />
+    <UnitTestResult executionId="43dc4933-21fd-456c-b267-1915a9194c53" testId="5fc27468-6f94-45ec-15e8-92513bb4cb61" testName="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.DelAbandonAlert_Positive" computerName="smcty-UATAgent" duration="00:00:00.0130851" startTime="2020-08-04T05:55:30.7663806+00:00" endTime="2020-08-04T05:55:30.7663818+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="43dc4933-21fd-456c-b267-1915a9194c53">
+      <Output>
+        <ErrorInfo>
+          <Message>System.ArgumentNullException : Value cannot be null. (Parameter 'source')</Message>
+          <StackTrace>   at System.Linq.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)&#xD;
+   at System.Linq.Enumerable.Any[TSource](IEnumerable`1 source)&#xD;
+   at SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.DelAbandonAlert_Positive() in /repo/src/test/integration/SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests/AlertTests.cs:line 651&#xD;
+--- End of stack trace from previous location where exception was thrown ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="94ede9f7-41c9-460b-a00b-a411d9ea9463" testId="f8f9a7bd-45a6-625c-dd7b-44757e00674b" testName="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAssetTypeStatusCount_Negative" computerName="smcty-UATAgent" duration="00:00:00.0201527" startTime="2020-08-04T05:55:30.9498282+00:00" endTime="2020-08-04T05:55:30.9498295+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="94ede9f7-41c9-460b-a00b-a411d9ea9463" />
+    <UnitTestResult executionId="31a2ae87-3151-4ca2-bfe7-272629ae8fde" testId="188bf1f9-e0b5-3e82-f0ea-1b924f54e362" testName="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlertsCountByStatus_MissingParam_JurId" computerName="smcty-UATAgent" duration="00:00:00.0169120" startTime="2020-08-04T05:55:30.7804242+00:00" endTime="2020-08-04T05:55:30.7804255+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="31a2ae87-3151-4ca2-bfe7-272629ae8fde" />
+    <UnitTestResult executionId="93bc223b-645a-4c64-a926-95fa0b925a99" testId="01a0cac5-07db-3d50-bdbd-58056b4a7a25" testName="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlertTypesByCategory_IncorrectId_CategoryId" computerName="smcty-UATAgent" duration="00:00:00.2411550" startTime="2020-08-04T05:55:30.7309633+00:00" endTime="2020-08-04T05:55:30.7309647+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="93bc223b-645a-4c64-a926-95fa0b925a99">
+      <Output>
+        <ErrorInfo>
+          <Message>System.ArgumentNullException : Value cannot be null. (Parameter 'source')</Message>
+          <StackTrace>   at System.Linq.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)&#xD;
+   at System.Linq.Enumerable.Any[TSource](IEnumerable`1 source)&#xD;
+   at SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlertTypesByCategory_IncorrectId_CategoryId() in /repo/src/test/integration/SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests/AlertTests.cs:line 463&#xD;
+--- End of stack trace from previous location where exception was thrown ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="b6f88498-8d31-47b0-ab93-73db0d34fee6" testId="0461ffd4-93bf-1559-a761-3b3052630aa8" testName="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAllAssetTypes_Positive" computerName="smcty-UATAgent" duration="00:00:00.0025844" startTime="2020-08-04T05:55:30.7299559+00:00" endTime="2020-08-04T05:55:30.7299578+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b6f88498-8d31-47b0-ab93-73db0d34fee6">
+      <Output>
+        <ErrorInfo>
+          <Message>System.IO.DirectoryNotFoundException : Could not find a part of the path 'C:\Users\Expected\AllAssetTypes.json'.</Message>
+          <StackTrace>   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)&#xD;
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)&#xD;
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)&#xD;
+   at System.IO.StreamReader.ValidateArgsAndOpenPath(String path, Encoding encoding, Int32 bufferSize)&#xD;
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks)&#xD;
+   at System.IO.File.InternalReadAllText(String path, Encoding encoding)&#xD;
+   at System.IO.File.ReadAllText(String path)&#xD;
+   at SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAllAssetTypes_Positive() in /repo/src/test/integration/SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests/AssetTests.cs:line 35&#xD;
+--- End of stack trace from previous location where exception was thrown ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="177d2e52-8e63-4700-8694-5080f4223777" testId="d7437fdd-4d42-9fec-a5dd-5b31227cc99a" testName="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAssociatedAssets_Negative_EmptyParam" computerName="smcty-UATAgent" duration="00:00:00.2367118" startTime="2020-08-04T05:55:30.5421843+00:00" endTime="2020-08-04T05:55:30.5422313+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="177d2e52-8e63-4700-8694-5080f4223777" />
+    <UnitTestResult executionId="ec61cbfb-3fa2-43f9-948e-f012d598130f" testId="c85900b6-3efb-ac6d-8a6e-9fe9f51ef384" testName="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlertTypesByCategory_MissingParam_CategoryId" computerName="smcty-UATAgent" duration="00:00:00.0084285" startTime="2020-08-04T05:55:30.8803811+00:00" endTime="2020-08-04T05:55:30.8803826+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ec61cbfb-3fa2-43f9-948e-f012d598130f" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAssociatedAssets_Negative_IncorrectAssetID" storage="c:\users\systemtestuser\desktop\smcty.system.testautomation.api-0.1.9\smartcitiescommandcenter.smcty.system.testautomation.api.web.integration.tests.dll" id="bbd515f4-f529-b6fb-8f9d-d7e065d3962c">
+      <Execution id="0a1b95f5-eb71-46b2-8c6e-458620b6bc3f" />
+      <TestMethod codeBase="C:\Users\SystemTestUser\Desktop\SmCty.System.TestAutomation.Api-0.1.9\SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests" name="GetAssociatedAssets_Negative_IncorrectAssetID" />
+    </UnitTest>
+    <UnitTest name="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAssetTelemetry_Negative_IncorrectAssetID" storage="c:\users\systemtestuser\desktop\smcty.system.testautomation.api-0.1.9\smartcitiescommandcenter.smcty.system.testautomation.api.web.integration.tests.dll" id="8f452ca7-080e-f371-30d0-51bb19defb7d">
+      <Execution id="3a0d33c7-7909-44e7-8d1b-09ab323fdb0c" />
+      <TestMethod codeBase="C:\Users\SystemTestUser\Desktop\SmCty.System.TestAutomation.Api-0.1.9\SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests" name="GetAssetTelemetry_Negative_IncorrectAssetID" />
+    </UnitTest>
+    <UnitTest name="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlertById_Incorrect_AlertId" storage="c:\users\systemtestuser\desktop\smcty.system.testautomation.api-0.1.9\smartcitiescommandcenter.smcty.system.testautomation.api.web.integration.tests.dll" id="e359fe45-a395-3c86-3698-5e08559fe209">
+      <Execution id="09a9b54c-8d92-4b58-8904-26d744c51583" />
+      <TestMethod codeBase="C:\Users\SystemTestUser\Desktop\SmCty.System.TestAutomation.Api-0.1.9\SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests" name="GetAlertById_Incorrect_AlertId" />
+    </UnitTest>
+    <UnitTest name="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlertTypesByCategory_MissingParam_CategoryId" storage="c:\users\systemtestuser\desktop\smcty.system.testautomation.api-0.1.9\smartcitiescommandcenter.smcty.system.testautomation.api.web.integration.tests.dll" id="c85900b6-3efb-ac6d-8a6e-9fe9f51ef384">
+      <Execution id="ec61cbfb-3fa2-43f9-948e-f012d598130f" />
+      <TestMethod codeBase="C:\Users\SystemTestUser\Desktop\SmCty.System.TestAutomation.Api-0.1.9\SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests" name="GetAlertTypesByCategory_MissingParam_CategoryId" />
+    </UnitTest>
+    <UnitTest name="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAssetByID_MissingParameterForAssetId" storage="c:\users\systemtestuser\desktop\smcty.system.testautomation.api-0.1.9\smartcitiescommandcenter.smcty.system.testautomation.api.web.integration.tests.dll" id="458f16e9-f3fa-8ce7-58cf-3bcb2fb73092">
+      <Execution id="c6a35d52-9507-4513-9429-64e2266b1350" />
+      <TestMethod codeBase="C:\Users\SystemTestUser\Desktop\SmCty.System.TestAutomation.Api-0.1.9\SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests" name="GetAssetByID_MissingParameterForAssetId" />
+    </UnitTest>
+    <UnitTest name="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlerts_Incorrect_JurId" storage="c:\users\systemtestuser\desktop\smcty.system.testautomation.api-0.1.9\smartcitiescommandcenter.smcty.system.testautomation.api.web.integration.tests.dll" id="251a2008-2dfc-accf-7356-c210ec045a55">
+      <Execution id="1510d106-a7f7-42f0-bfa6-d8a6abeaeab6" />
+      <TestMethod codeBase="C:\Users\SystemTestUser\Desktop\SmCty.System.TestAutomation.Api-0.1.9\SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests" name="GetAlerts_Incorrect_JurId" />
+    </UnitTest>
+    <UnitTest name="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAssetTypeStatusCount_Positive" storage="c:\users\systemtestuser\desktop\smcty.system.testautomation.api-0.1.9\smartcitiescommandcenter.smcty.system.testautomation.api.web.integration.tests.dll" id="5447f736-b30b-935b-caad-c646bd01d4fa">
+      <Execution id="b86d048a-e753-4f63-8d71-0dbbb9c12162" />
+      <TestMethod codeBase="C:\Users\SystemTestUser\Desktop\SmCty.System.TestAutomation.Api-0.1.9\SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests" name="GetAssetTypeStatusCount_Positive" />
+    </UnitTest>
+    <UnitTest name="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlertsCountByPriority_IncorrectDataType_JurId" storage="c:\users\systemtestuser\desktop\smcty.system.testautomation.api-0.1.9\smartcitiescommandcenter.smcty.system.testautomation.api.web.integration.tests.dll" id="0056d20d-676b-c356-48b2-94938005a756">
+      <Execution id="6922b34a-7908-4c88-b6d2-4d4de5cfa27c" />
+      <TestMethod codeBase="C:\Users\SystemTestUser\Desktop\SmCty.System.TestAutomation.Api-0.1.9\SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests" name="GetAlertsCountByPriority_IncorrectDataType_JurId" />
+    </UnitTest>
+    <UnitTest name="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlertById_Positive" storage="c:\users\systemtestuser\desktop\smcty.system.testautomation.api-0.1.9\smartcitiescommandcenter.smcty.system.testautomation.api.web.integration.tests.dll" id="a5de3c89-f9fd-e96a-bf60-1181b1701f04">
+      <Execution id="f2f88e2c-0db5-4e87-9602-882f263441ac" />
+      <TestMethod codeBase="C:\Users\SystemTestUser\Desktop\SmCty.System.TestAutomation.Api-0.1.9\SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests" name="GetAlertById_Positive" />
+    </UnitTest>
+    <UnitTest name="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.DelAbandonAlert_MissingParam" storage="c:\users\systemtestuser\desktop\smcty.system.testautomation.api-0.1.9\smartcitiescommandcenter.smcty.system.testautomation.api.web.integration.tests.dll" id="e3be6ee5-24bd-7c21-4307-9797dd3292cc">
+      <Execution id="bab4f30c-3ecb-4dd7-a34a-72078d889c30" />
+      <TestMethod codeBase="C:\Users\SystemTestUser\Desktop\SmCty.System.TestAutomation.Api-0.1.9\SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests" name="DelAbandonAlert_MissingParam" />
+    </UnitTest>
+    <UnitTest name="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAsetByID_Positive" storage="c:\users\systemtestuser\desktop\smcty.system.testautomation.api-0.1.9\smartcitiescommandcenter.smcty.system.testautomation.api.web.integration.tests.dll" id="908475a9-f4d1-cd49-a011-3f676bc8d98f">
+      <Execution id="0a64d972-b107-426b-9299-a32e2452bdc3" />
+      <TestMethod codeBase="C:\Users\SystemTestUser\Desktop\SmCty.System.TestAutomation.Api-0.1.9\SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests" name="GetAsetByID_Positive" />
+    </UnitTest>
+    <UnitTest name="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAllAssets_Negative_MissingParam_MaxResults" storage="c:\users\systemtestuser\desktop\smcty.system.testautomation.api-0.1.9\smartcitiescommandcenter.smcty.system.testautomation.api.web.integration.tests.dll" id="fd887fa1-c235-9f18-e228-a681c0b13e39">
+      <Execution id="0152347d-c23b-45d3-b453-57980799d838" />
+      <TestMethod codeBase="C:\Users\SystemTestUser\Desktop\SmCty.System.TestAutomation.Api-0.1.9\SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests" name="GetAllAssets_Negative_MissingParam_MaxResults" />
+    </UnitTest>
+    <UnitTest name="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlertsCountByStatus_Incorrect_DataType_JurId" storage="c:\users\systemtestuser\desktop\smcty.system.testautomation.api-0.1.9\smartcitiescommandcenter.smcty.system.testautomation.api.web.integration.tests.dll" id="74c6ef43-05de-710f-7332-c2ef84a960e0">
+      <Execution id="87e5b773-9d41-495a-bbf0-060306ae41d5" />
+      <TestMethod codeBase="C:\Users\SystemTestUser\Desktop\SmCty.System.TestAutomation.Api-0.1.9\SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests" name="GetAlertsCountByStatus_Incorrect_DataType_JurId" />
+    </UnitTest>
+    <UnitTest name="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlertsCountByPriority_Positive" storage="c:\users\systemtestuser\desktop\smcty.system.testautomation.api-0.1.9\smartcitiescommandcenter.smcty.system.testautomation.api.web.integration.tests.dll" id="d7c5b6d4-d12b-66fc-311b-b5e0cf285cad">
+      <Execution id="c185b5f6-5010-47e6-b22a-1a0feda29836" />
+      <TestMethod codeBase="C:\Users\SystemTestUser\Desktop\SmCty.System.TestAutomation.Api-0.1.9\SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests" name="GetAlertsCountByPriority_Positive" />
+    </UnitTest>
+    <UnitTest name="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlertTypesByAlertTypeId_Positive" storage="c:\users\systemtestuser\desktop\smcty.system.testautomation.api-0.1.9\smartcitiescommandcenter.smcty.system.testautomation.api.web.integration.tests.dll" id="acad223b-7791-61fc-8bab-2d841d71f1e8">
+      <Execution id="b7055664-2e89-4ea0-9d01-2d8b18ff92f5" />
+      <TestMethod codeBase="C:\Users\SystemTestUser\Desktop\SmCty.System.TestAutomation.Api-0.1.9\SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests" name="GetAlertTypesByAlertTypeId_Positive" />
+    </UnitTest>
+    <UnitTest name="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAssetByID_Negative_NullForAssetId" storage="c:\users\systemtestuser\desktop\smcty.system.testautomation.api-0.1.9\smartcitiescommandcenter.smcty.system.testautomation.api.web.integration.tests.dll" id="1bab4c9c-3190-6e83-e304-040ea3848745">
+      <Execution id="4f795cb0-1d93-45ab-bc94-c08f42cdaad9" />
+      <TestMethod codeBase="C:\Users\SystemTestUser\Desktop\SmCty.System.TestAutomation.Api-0.1.9\SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests" name="GetAssetByID_Negative_NullForAssetId" />
+    </UnitTest>
+    <UnitTest name="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlertsCategories_Positive" storage="c:\users\systemtestuser\desktop\smcty.system.testautomation.api-0.1.9\smartcitiescommandcenter.smcty.system.testautomation.api.web.integration.tests.dll" id="34451070-4901-3c56-1dc1-0ba28f72c6cf">
+      <Execution id="9a2d5af0-607f-41ca-8cfd-598130e1bb1c" />
+      <TestMethod codeBase="C:\Users\SystemTestUser\Desktop\SmCty.System.TestAutomation.Api-0.1.9\SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests" name="GetAlertsCategories_Positive" />
+    </UnitTest>
+    <UnitTest name="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlertTypesByCategory_Positive" storage="c:\users\systemtestuser\desktop\smcty.system.testautomation.api-0.1.9\smartcitiescommandcenter.smcty.system.testautomation.api.web.integration.tests.dll" id="cbb6ebb5-9d86-b2fd-33fb-df0dd30f1c13">
+      <Execution id="d16a8e23-faa5-4014-a3d5-25c3dbcd1175" />
+      <TestMethod codeBase="C:\Users\SystemTestUser\Desktop\SmCty.System.TestAutomation.Api-0.1.9\SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests" name="GetAlertTypesByCategory_Positive" />
+    </UnitTest>
+    <UnitTest name="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlertsCountByPriority_MissingParam_JurId" storage="c:\users\systemtestuser\desktop\smcty.system.testautomation.api-0.1.9\smartcitiescommandcenter.smcty.system.testautomation.api.web.integration.tests.dll" id="b87544c3-7a91-8415-f2e8-29dcd6dbbad0">
+      <Execution id="e49ba845-59dc-41df-be93-846c5b23873d" />
+      <TestMethod codeBase="C:\Users\SystemTestUser\Desktop\SmCty.System.TestAutomation.Api-0.1.9\SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests" name="GetAlertsCountByPriority_MissingParam_JurId" />
+    </UnitTest>
+    <UnitTest name="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAssociatedAssets_Positive" storage="c:\users\systemtestuser\desktop\smcty.system.testautomation.api-0.1.9\smartcitiescommandcenter.smcty.system.testautomation.api.web.integration.tests.dll" id="aae64a0c-0df5-bf06-3b15-ed5965d200e1">
+      <Execution id="c6b08cee-a1df-4022-832e-670d4a29f9bf" />
+      <TestMethod codeBase="C:\Users\SystemTestUser\Desktop\SmCty.System.TestAutomation.Api-0.1.9\SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests" name="GetAssociatedAssets_Positive" />
+    </UnitTest>
+    <UnitTest name="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAllAssets_Negative_EmptyParam_MaxResults" storage="c:\users\systemtestuser\desktop\smcty.system.testautomation.api-0.1.9\smartcitiescommandcenter.smcty.system.testautomation.api.web.integration.tests.dll" id="822729e9-30b7-e451-50b5-3f1118a3fb99">
+      <Execution id="d2cb4a37-28d4-48b8-b45a-e99314f1c907" />
+      <TestMethod codeBase="C:\Users\SystemTestUser\Desktop\SmCty.System.TestAutomation.Api-0.1.9\SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests" name="GetAllAssets_Negative_EmptyParam_MaxResults" />
+    </UnitTest>
+    <UnitTest name="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAssociatedAssets_Negative_InvalidDatatype" storage="c:\users\systemtestuser\desktop\smcty.system.testautomation.api-0.1.9\smartcitiescommandcenter.smcty.system.testautomation.api.web.integration.tests.dll" id="fe6cdd7d-6568-89ae-e003-eba92de4894b">
+      <Execution id="135a3122-2ebe-4d67-84eb-c8895f0440e1" />
+      <TestMethod codeBase="C:\Users\SystemTestUser\Desktop\SmCty.System.TestAutomation.Api-0.1.9\SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests" name="GetAssociatedAssets_Negative_InvalidDatatype" />
+    </UnitTest>
+    <UnitTest name="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlertTypesByCategory_IncorrectId_CategoryId" storage="c:\users\systemtestuser\desktop\smcty.system.testautomation.api-0.1.9\smartcitiescommandcenter.smcty.system.testautomation.api.web.integration.tests.dll" id="01a0cac5-07db-3d50-bdbd-58056b4a7a25">
+      <Execution id="93bc223b-645a-4c64-a926-95fa0b925a99" />
+      <TestMethod codeBase="C:\Users\SystemTestUser\Desktop\SmCty.System.TestAutomation.Api-0.1.9\SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests" name="GetAlertTypesByCategory_IncorrectId_CategoryId" />
+    </UnitTest>
+    <UnitTest name="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlertsCountByPriority_Incorrect_JurId" storage="c:\users\systemtestuser\desktop\smcty.system.testautomation.api-0.1.9\smartcitiescommandcenter.smcty.system.testautomation.api.web.integration.tests.dll" id="10961464-bece-20d9-1d58-2529715ed855">
+      <Execution id="290912fa-1e05-4988-a301-aaddba9d7687" />
+      <TestMethod codeBase="C:\Users\SystemTestUser\Desktop\SmCty.System.TestAutomation.Api-0.1.9\SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests" name="GetAlertsCountByPriority_Incorrect_JurId" />
+    </UnitTest>
+    <UnitTest name="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAllAssets_Negative_MaxResults_IncorrectDatatype" storage="c:\users\systemtestuser\desktop\smcty.system.testautomation.api-0.1.9\smartcitiescommandcenter.smcty.system.testautomation.api.web.integration.tests.dll" id="a157dd5b-c408-327f-05ca-5ca8ca18f0e3">
+      <Execution id="a7068107-5d7d-4ef3-aa96-4ff936479be5" />
+      <TestMethod codeBase="C:\Users\SystemTestUser\Desktop\SmCty.System.TestAutomation.Api-0.1.9\SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests" name="GetAllAssets_Negative_MaxResults_IncorrectDatatype" />
+    </UnitTest>
+    <UnitTest name="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAssetTelemetry_Negative_EmptyParam" storage="c:\users\systemtestuser\desktop\smcty.system.testautomation.api-0.1.9\smartcitiescommandcenter.smcty.system.testautomation.api.web.integration.tests.dll" id="115ef09a-aa55-ae3b-581a-cbbf0d5e59e9">
+      <Execution id="a29f9270-fef8-4b0c-be6a-3a035adaa8df" />
+      <TestMethod codeBase="C:\Users\SystemTestUser\Desktop\SmCty.System.TestAutomation.Api-0.1.9\SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests" name="GetAssetTelemetry_Negative_EmptyParam" />
+    </UnitTest>
+    <UnitTest name="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlertsCountByStatus_IncorrectJurId" storage="c:\users\systemtestuser\desktop\smcty.system.testautomation.api-0.1.9\smartcitiescommandcenter.smcty.system.testautomation.api.web.integration.tests.dll" id="47d2bfbc-a4ca-a550-38f2-dadd95152ef0">
+      <Execution id="a8cbea4b-73ef-4f73-bb4f-9f0680aa1d3b" />
+      <TestMethod codeBase="C:\Users\SystemTestUser\Desktop\SmCty.System.TestAutomation.Api-0.1.9\SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests" name="GetAlertsCountByStatus_IncorrectJurId" />
+    </UnitTest>
+    <UnitTest name="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAssociatedAssets_Negative_MissingParam" storage="c:\users\systemtestuser\desktop\smcty.system.testautomation.api-0.1.9\smartcitiescommandcenter.smcty.system.testautomation.api.web.integration.tests.dll" id="092ce2d2-676a-ecc4-356d-684f87436df4">
+      <Execution id="3797b88b-1834-44b0-a466-0fd7246e3667" />
+      <TestMethod codeBase="C:\Users\SystemTestUser\Desktop\SmCty.System.TestAutomation.Api-0.1.9\SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests" name="GetAssociatedAssets_Negative_MissingParam" />
+    </UnitTest>
+    <UnitTest name="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlerts_MissingParam_Maxresults" storage="c:\users\systemtestuser\desktop\smcty.system.testautomation.api-0.1.9\smartcitiescommandcenter.smcty.system.testautomation.api.web.integration.tests.dll" id="3055b284-c8dd-2141-6d99-5ff19a3c283e">
+      <Execution id="a09b4010-a864-4864-af6a-41e12895d5c9" />
+      <TestMethod codeBase="C:\Users\SystemTestUser\Desktop\SmCty.System.TestAutomation.Api-0.1.9\SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests" name="GetAlerts_MissingParam_Maxresults" />
+    </UnitTest>
+    <UnitTest name="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAssetTypeStatusCount_Negative" storage="c:\users\systemtestuser\desktop\smcty.system.testautomation.api-0.1.9\smartcitiescommandcenter.smcty.system.testautomation.api.web.integration.tests.dll" id="f8f9a7bd-45a6-625c-dd7b-44757e00674b">
+      <Execution id="94ede9f7-41c9-460b-a00b-a411d9ea9463" />
+      <TestMethod codeBase="C:\Users\SystemTestUser\Desktop\SmCty.System.TestAutomation.Api-0.1.9\SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests" name="GetAssetTypeStatusCount_Negative" />
+    </UnitTest>
+    <UnitTest name="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlerts_Positive" storage="c:\users\systemtestuser\desktop\smcty.system.testautomation.api-0.1.9\smartcitiescommandcenter.smcty.system.testautomation.api.web.integration.tests.dll" id="0c71635a-df38-1dc9-9899-8cf2091aef13">
+      <Execution id="0c1dad3c-d54b-43cb-8e58-9cf9d69baec6" />
+      <TestMethod codeBase="C:\Users\SystemTestUser\Desktop\SmCty.System.TestAutomation.Api-0.1.9\SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests" name="GetAlerts_Positive" />
+    </UnitTest>
+    <UnitTest name="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.DelAbandonAlert_Incorrect_DataType" storage="c:\users\systemtestuser\desktop\smcty.system.testautomation.api-0.1.9\smartcitiescommandcenter.smcty.system.testautomation.api.web.integration.tests.dll" id="0b2c88b3-14db-32f4-81b4-059a412c99f7">
+      <Execution id="9268e53a-e1bb-4a70-86f8-355c525f3319" />
+      <TestMethod codeBase="C:\Users\SystemTestUser\Desktop\SmCty.System.TestAutomation.Api-0.1.9\SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests" name="DelAbandonAlert_Incorrect_DataType" />
+    </UnitTest>
+    <UnitTest name="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlertTypesByAlertTypeId_IncorrectId" storage="c:\users\systemtestuser\desktop\smcty.system.testautomation.api-0.1.9\smartcitiescommandcenter.smcty.system.testautomation.api.web.integration.tests.dll" id="6d2b15f9-8ea5-58ff-2b00-83896727d46b">
+      <Execution id="6dfae478-b98a-43a7-b817-0754adfb0828" />
+      <TestMethod codeBase="C:\Users\SystemTestUser\Desktop\SmCty.System.TestAutomation.Api-0.1.9\SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests" name="GetAlertTypesByAlertTypeId_IncorrectId" />
+    </UnitTest>
+    <UnitTest name="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.DelAbandonAlert_Positive" storage="c:\users\systemtestuser\desktop\smcty.system.testautomation.api-0.1.9\smartcitiescommandcenter.smcty.system.testautomation.api.web.integration.tests.dll" id="5fc27468-6f94-45ec-15e8-92513bb4cb61">
+      <Execution id="43dc4933-21fd-456c-b267-1915a9194c53" />
+      <TestMethod codeBase="C:\Users\SystemTestUser\Desktop\SmCty.System.TestAutomation.Api-0.1.9\SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests" name="DelAbandonAlert_Positive" />
+    </UnitTest>
+    <UnitTest name="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlertById_IncorrectDataType_AlertId" storage="c:\users\systemtestuser\desktop\smcty.system.testautomation.api-0.1.9\smartcitiescommandcenter.smcty.system.testautomation.api.web.integration.tests.dll" id="e494ab53-436b-991b-2f2a-ecd7218deff6">
+      <Execution id="aa67d558-bc70-4eac-a325-2b872c56534f" />
+      <TestMethod codeBase="C:\Users\SystemTestUser\Desktop\SmCty.System.TestAutomation.Api-0.1.9\SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests" name="GetAlertById_IncorrectDataType_AlertId" />
+    </UnitTest>
+    <UnitTest name="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlertTypesByAlertTypeId_Incorrect_DataType" storage="c:\users\systemtestuser\desktop\smcty.system.testautomation.api-0.1.9\smartcitiescommandcenter.smcty.system.testautomation.api.web.integration.tests.dll" id="d0136157-ea3d-ebf1-95e0-7861e2a71a8f">
+      <Execution id="064bfb1e-ba53-4f3c-9813-aac7e67b439a" />
+      <TestMethod codeBase="C:\Users\SystemTestUser\Desktop\SmCty.System.TestAutomation.Api-0.1.9\SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests" name="GetAlertTypesByAlertTypeId_Incorrect_DataType" />
+    </UnitTest>
+    <UnitTest name="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAssetTelemetry_Positive" storage="c:\users\systemtestuser\desktop\smcty.system.testautomation.api-0.1.9\smartcitiescommandcenter.smcty.system.testautomation.api.web.integration.tests.dll" id="7221e86c-5d5d-bd7e-fc93-0b4acc19ef64">
+      <Execution id="38d176ec-51b5-44e7-8c3b-3ee4d6c0a10c" />
+      <TestMethod codeBase="C:\Users\SystemTestUser\Desktop\SmCty.System.TestAutomation.Api-0.1.9\SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests" name="GetAssetTelemetry_Positive" />
+    </UnitTest>
+    <UnitTest name="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAssociatedAssets_Negative_EmptyParam" storage="c:\users\systemtestuser\desktop\smcty.system.testautomation.api-0.1.9\smartcitiescommandcenter.smcty.system.testautomation.api.web.integration.tests.dll" id="d7437fdd-4d42-9fec-a5dd-5b31227cc99a">
+      <Execution id="177d2e52-8e63-4700-8694-5080f4223777" />
+      <TestMethod codeBase="C:\Users\SystemTestUser\Desktop\SmCty.System.TestAutomation.Api-0.1.9\SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests" name="GetAssociatedAssets_Negative_EmptyParam" />
+    </UnitTest>
+    <UnitTest name="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAssetTelemetry_Negative_MissingParam" storage="c:\users\systemtestuser\desktop\smcty.system.testautomation.api-0.1.9\smartcitiescommandcenter.smcty.system.testautomation.api.web.integration.tests.dll" id="614a5efd-0672-5f3d-9ebe-31fa82333091">
+      <Execution id="bda71a02-38c7-42c3-b8e6-9f3a859b853a" />
+      <TestMethod codeBase="C:\Users\SystemTestUser\Desktop\SmCty.System.TestAutomation.Api-0.1.9\SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests" name="GetAssetTelemetry_Negative_MissingParam" />
+    </UnitTest>
+    <UnitTest name="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlertsCountByStatus_MissingParam_JurId" storage="c:\users\systemtestuser\desktop\smcty.system.testautomation.api-0.1.9\smartcitiescommandcenter.smcty.system.testautomation.api.web.integration.tests.dll" id="188bf1f9-e0b5-3e82-f0ea-1b924f54e362">
+      <Execution id="31a2ae87-3151-4ca2-bfe7-272629ae8fde" />
+      <TestMethod codeBase="C:\Users\SystemTestUser\Desktop\SmCty.System.TestAutomation.Api-0.1.9\SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests" name="GetAlertsCountByStatus_MissingParam_JurId" />
+    </UnitTest>
+    <UnitTest name="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAllAssets_Positive" storage="c:\users\systemtestuser\desktop\smcty.system.testautomation.api-0.1.9\smartcitiescommandcenter.smcty.system.testautomation.api.web.integration.tests.dll" id="9cf580eb-e029-4504-464f-b1efdae43d33">
+      <Execution id="80fa464f-374e-4112-b627-142672bd3817" />
+      <TestMethod codeBase="C:\Users\SystemTestUser\Desktop\SmCty.System.TestAutomation.Api-0.1.9\SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests" name="GetAllAssets_Positive" />
+    </UnitTest>
+    <UnitTest name="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlertTypesByCategory_Incorrect_DataType_CategoryId" storage="c:\users\systemtestuser\desktop\smcty.system.testautomation.api-0.1.9\smartcitiescommandcenter.smcty.system.testautomation.api.web.integration.tests.dll" id="b48da210-1977-d69d-42a1-e474d2b9f182">
+      <Execution id="f7cb86bf-53c5-4070-b5d5-2f4df8409cd2" />
+      <TestMethod codeBase="C:\Users\SystemTestUser\Desktop\SmCty.System.TestAutomation.Api-0.1.9\SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests" name="GetAlertTypesByCategory_Incorrect_DataType_CategoryId" />
+    </UnitTest>
+    <UnitTest name="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlerts_Incorrect_DataType_JurId" storage="c:\users\systemtestuser\desktop\smcty.system.testautomation.api-0.1.9\smartcitiescommandcenter.smcty.system.testautomation.api.web.integration.tests.dll" id="25978b66-54ac-f93c-ba7c-33e9f6fe8b73">
+      <Execution id="0d89e952-24a1-43e9-bdd8-5700d84a7608" />
+      <TestMethod codeBase="C:\Users\SystemTestUser\Desktop\SmCty.System.TestAutomation.Api-0.1.9\SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests" name="GetAlerts_Incorrect_DataType_JurId" />
+    </UnitTest>
+    <UnitTest name="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAllAssetTypes_Positive" storage="c:\users\systemtestuser\desktop\smcty.system.testautomation.api-0.1.9\smartcitiescommandcenter.smcty.system.testautomation.api.web.integration.tests.dll" id="0461ffd4-93bf-1559-a761-3b3052630aa8">
+      <Execution id="b6f88498-8d31-47b0-ab93-73db0d34fee6" />
+      <TestMethod codeBase="C:\Users\SystemTestUser\Desktop\SmCty.System.TestAutomation.Api-0.1.9\SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests" name="GetAllAssetTypes_Positive" />
+    </UnitTest>
+    <UnitTest name="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAssetByID_Negative_IncorrectAssetID" storage="c:\users\systemtestuser\desktop\smcty.system.testautomation.api-0.1.9\smartcitiescommandcenter.smcty.system.testautomation.api.web.integration.tests.dll" id="5115355a-79c0-7f9c-66f5-00587ba3537d">
+      <Execution id="9085f585-8310-4b11-b086-d03aa4f9e10f" />
+      <TestMethod codeBase="C:\Users\SystemTestUser\Desktop\SmCty.System.TestAutomation.Api-0.1.9\SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests" name="GetAssetByID_Negative_IncorrectAssetID" />
+    </UnitTest>
+    <UnitTest name="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlertsCountByStatus_Positive" storage="c:\users\systemtestuser\desktop\smcty.system.testautomation.api-0.1.9\smartcitiescommandcenter.smcty.system.testautomation.api.web.integration.tests.dll" id="f9f427a2-366e-480f-958c-fb4609121058">
+      <Execution id="630e7ea5-3c71-4760-87df-a6dae186af85" />
+      <TestMethod codeBase="C:\Users\SystemTestUser\Desktop\SmCty.System.TestAutomation.Api-0.1.9\SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests" name="GetAlertsCountByStatus_Positive" />
+    </UnitTest>
+    <UnitTest name="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAssetByID_Negative_InvalidDataTypeForAssetId" storage="c:\users\systemtestuser\desktop\smcty.system.testautomation.api-0.1.9\smartcitiescommandcenter.smcty.system.testautomation.api.web.integration.tests.dll" id="c71887c0-1842-8881-3958-04eb38a80d08">
+      <Execution id="350990f5-88f3-4319-8bf7-cccf5ce93578" />
+      <TestMethod codeBase="C:\Users\SystemTestUser\Desktop\SmCty.System.TestAutomation.Api-0.1.9\SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests" name="GetAssetByID_Negative_InvalidDataTypeForAssetId" />
+    </UnitTest>
+    <UnitTest name="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAsetTelemetry_Negative_InvalidDatatype" storage="c:\users\systemtestuser\desktop\smcty.system.testautomation.api-0.1.9\smartcitiescommandcenter.smcty.system.testautomation.api.web.integration.tests.dll" id="4bd30d55-d6f4-d7ac-0458-d08934598d6c">
+      <Execution id="5a771cad-b6e6-492f-b637-65f362aca900" />
+      <TestMethod codeBase="C:\Users\SystemTestUser\Desktop\SmCty.System.TestAutomation.Api-0.1.9\SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests" name="GetAsetTelemetry_Negative_InvalidDatatype" />
+    </UnitTest>
+    <UnitTest name="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAllAssetTypes_Negative_IncorrectVesion" storage="c:\users\systemtestuser\desktop\smcty.system.testautomation.api-0.1.9\smartcitiescommandcenter.smcty.system.testautomation.api.web.integration.tests.dll" id="b0e4dd2e-c51f-e8e3-5793-aeef3174d2d1">
+      <Execution id="ba3c5647-a8ad-408c-b44c-f6ae1204d1e1" />
+      <TestMethod codeBase="C:\Users\SystemTestUser\Desktop\SmCty.System.TestAutomation.Api-0.1.9\SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests" name="GetAllAssetTypes_Negative_IncorrectVesion" />
+    </UnitTest>
+    <UnitTest name="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlertTypesByAlertTypeId_MissingParam" storage="c:\users\systemtestuser\desktop\smcty.system.testautomation.api-0.1.9\smartcitiescommandcenter.smcty.system.testautomation.api.web.integration.tests.dll" id="a7582682-174e-083c-831e-c52a61e254c8">
+      <Execution id="bd8ba668-7a81-4968-afea-dd62b251ac56" />
+      <TestMethod codeBase="C:\Users\SystemTestUser\Desktop\SmCty.System.TestAutomation.Api-0.1.9\SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests" name="GetAlertTypesByAlertTypeId_MissingParam" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="614a5efd-0672-5f3d-9ebe-31fa82333091" executionId="bda71a02-38c7-42c3-b8e6-9f3a859b853a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5447f736-b30b-935b-caad-c646bd01d4fa" executionId="b86d048a-e753-4f63-8d71-0dbbb9c12162" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="aae64a0c-0df5-bf06-3b15-ed5965d200e1" executionId="c6b08cee-a1df-4022-832e-670d4a29f9bf" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="bbd515f4-f529-b6fb-8f9d-d7e065d3962c" executionId="0a1b95f5-eb71-46b2-8c6e-458620b6bc3f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a5de3c89-f9fd-e96a-bf60-1181b1701f04" executionId="f2f88e2c-0db5-4e87-9602-882f263441ac" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="115ef09a-aa55-ae3b-581a-cbbf0d5e59e9" executionId="a29f9270-fef8-4b0c-be6a-3a035adaa8df" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e494ab53-436b-991b-2f2a-ecd7218deff6" executionId="aa67d558-bc70-4eac-a325-2b872c56534f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fd887fa1-c235-9f18-e228-a681c0b13e39" executionId="0152347d-c23b-45d3-b453-57980799d838" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4bd30d55-d6f4-d7ac-0458-d08934598d6c" executionId="5a771cad-b6e6-492f-b637-65f362aca900" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a7582682-174e-083c-831e-c52a61e254c8" executionId="bd8ba668-7a81-4968-afea-dd62b251ac56" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8f452ca7-080e-f371-30d0-51bb19defb7d" executionId="3a0d33c7-7909-44e7-8d1b-09ab323fdb0c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b48da210-1977-d69d-42a1-e474d2b9f182" executionId="f7cb86bf-53c5-4070-b5d5-2f4df8409cd2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="908475a9-f4d1-cd49-a011-3f676bc8d98f" executionId="0a64d972-b107-426b-9299-a32e2452bdc3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="092ce2d2-676a-ecc4-356d-684f87436df4" executionId="3797b88b-1834-44b0-a466-0fd7246e3667" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0c71635a-df38-1dc9-9899-8cf2091aef13" executionId="0c1dad3c-d54b-43cb-8e58-9cf9d69baec6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1bab4c9c-3190-6e83-e304-040ea3848745" executionId="4f795cb0-1d93-45ab-bc94-c08f42cdaad9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b87544c3-7a91-8415-f2e8-29dcd6dbbad0" executionId="e49ba845-59dc-41df-be93-846c5b23873d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d0136157-ea3d-ebf1-95e0-7861e2a71a8f" executionId="064bfb1e-ba53-4f3c-9813-aac7e67b439a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="251a2008-2dfc-accf-7356-c210ec045a55" executionId="1510d106-a7f7-42f0-bfa6-d8a6abeaeab6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d7c5b6d4-d12b-66fc-311b-b5e0cf285cad" executionId="c185b5f6-5010-47e6-b22a-1a0feda29836" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="458f16e9-f3fa-8ce7-58cf-3bcb2fb73092" executionId="c6a35d52-9507-4513-9429-64e2266b1350" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fe6cdd7d-6568-89ae-e003-eba92de4894b" executionId="135a3122-2ebe-4d67-84eb-c8895f0440e1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f9f427a2-366e-480f-958c-fb4609121058" executionId="630e7ea5-3c71-4760-87df-a6dae186af85" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9cf580eb-e029-4504-464f-b1efdae43d33" executionId="80fa464f-374e-4112-b627-142672bd3817" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5115355a-79c0-7f9c-66f5-00587ba3537d" executionId="9085f585-8310-4b11-b086-d03aa4f9e10f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="34451070-4901-3c56-1dc1-0ba28f72c6cf" executionId="9a2d5af0-607f-41ca-8cfd-598130e1bb1c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3055b284-c8dd-2141-6d99-5ff19a3c283e" executionId="a09b4010-a864-4864-af6a-41e12895d5c9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a157dd5b-c408-327f-05ca-5ca8ca18f0e3" executionId="a7068107-5d7d-4ef3-aa96-4ff936479be5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="822729e9-30b7-e451-50b5-3f1118a3fb99" executionId="d2cb4a37-28d4-48b8-b45a-e99314f1c907" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7221e86c-5d5d-bd7e-fc93-0b4acc19ef64" executionId="38d176ec-51b5-44e7-8c3b-3ee4d6c0a10c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cbb6ebb5-9d86-b2fd-33fb-df0dd30f1c13" executionId="d16a8e23-faa5-4014-a3d5-25c3dbcd1175" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="25978b66-54ac-f93c-ba7c-33e9f6fe8b73" executionId="0d89e952-24a1-43e9-bdd8-5700d84a7608" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b0e4dd2e-c51f-e8e3-5793-aeef3174d2d1" executionId="ba3c5647-a8ad-408c-b44c-f6ae1204d1e1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0b2c88b3-14db-32f4-81b4-059a412c99f7" executionId="9268e53a-e1bb-4a70-86f8-355c525f3319" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="74c6ef43-05de-710f-7332-c2ef84a960e0" executionId="87e5b773-9d41-495a-bbf0-060306ae41d5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="acad223b-7791-61fc-8bab-2d841d71f1e8" executionId="b7055664-2e89-4ea0-9d01-2d8b18ff92f5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0056d20d-676b-c356-48b2-94938005a756" executionId="6922b34a-7908-4c88-b6d2-4d4de5cfa27c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6d2b15f9-8ea5-58ff-2b00-83896727d46b" executionId="6dfae478-b98a-43a7-b817-0754adfb0828" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="10961464-bece-20d9-1d58-2529715ed855" executionId="290912fa-1e05-4988-a301-aaddba9d7687" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e359fe45-a395-3c86-3698-5e08559fe209" executionId="09a9b54c-8d92-4b58-8904-26d744c51583" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e3be6ee5-24bd-7c21-4307-9797dd3292cc" executionId="bab4f30c-3ecb-4dd7-a34a-72078d889c30" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c71887c0-1842-8881-3958-04eb38a80d08" executionId="350990f5-88f3-4319-8bf7-cccf5ce93578" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="47d2bfbc-a4ca-a550-38f2-dadd95152ef0" executionId="a8cbea4b-73ef-4f73-bb4f-9f0680aa1d3b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5fc27468-6f94-45ec-15e8-92513bb4cb61" executionId="43dc4933-21fd-456c-b267-1915a9194c53" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f8f9a7bd-45a6-625c-dd7b-44757e00674b" executionId="94ede9f7-41c9-460b-a00b-a411d9ea9463" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="188bf1f9-e0b5-3e82-f0ea-1b924f54e362" executionId="31a2ae87-3151-4ca2-bfe7-272629ae8fde" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="01a0cac5-07db-3d50-bdbd-58056b4a7a25" executionId="93bc223b-645a-4c64-a926-95fa0b925a99" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0461ffd4-93bf-1559-a761-3b3052630aa8" executionId="b6f88498-8d31-47b0-ab93-73db0d34fee6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d7437fdd-4d42-9fec-a5dd-5b31227cc99a" executionId="177d2e52-8e63-4700-8694-5080f4223777" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c85900b6-3efb-ac6d-8a6e-9fe9f51ef384" executionId="ec61cbfb-3fa2-43f9-948e-f012d598130f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Failed">
+    <Counters total="50" executed="50" passed="24" failed="26" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v2.4.0 (64-bit .NET Core 3.1.6)&#xD;
+[xUnit.net 00:00:01.55]   Discovering: SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests&#xD;
+[xUnit.net 00:00:01.62]   Discovered:  SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests&#xD;
+[xUnit.net 00:00:01.63]   Starting:    SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests&#xD;
+[xUnit.net 00:00:02.14]       System.IO.DirectoryNotFoundException : Could not find a part of the path 'C:\Users\Expected\AllAssetTypes.json'.&#xD;
+[xUnit.net 00:00:02.14]       Stack Trace:&#xD;
+[xUnit.net 00:00:02.14]            at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)&#xD;
+[xUnit.net 00:00:02.14]            at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)&#xD;
+[xUnit.net 00:00:02.14]            at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)&#xD;
+[xUnit.net 00:00:02.14]            at System.IO.StreamReader.ValidateArgsAndOpenPath(String path, Encoding encoding, Int32 bufferSize)&#xD;
+[xUnit.net 00:00:02.14]            at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks)&#xD;
+[xUnit.net 00:00:02.14]            at System.IO.File.InternalReadAllText(String path, Encoding encoding)&#xD;
+[xUnit.net 00:00:02.14]            at System.IO.File.ReadAllText(String path)&#xD;
+[xUnit.net 00:00:02.14]         /repo/src/test/integration/SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests/AssetTests.cs(35,0): at SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAllAssetTypes_Positive()&#xD;
+[xUnit.net 00:00:02.14]         --- End of stack trace from previous location where exception was thrown ---&#xD;
+[xUnit.net 00:00:02.14]       System.ArgumentNullException : Value cannot be null. (Parameter 'source')&#xD;
+[xUnit.net 00:00:02.14]       Stack Trace:&#xD;
+[xUnit.net 00:00:02.14]            at System.Linq.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)&#xD;
+[xUnit.net 00:00:02.14]            at System.Linq.Enumerable.Any[TSource](IEnumerable`1 source)&#xD;
+[xUnit.net 00:00:02.14]         /repo/src/test/integration/SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests/AlertTests.cs(463,0): at SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlertTypesByCategory_IncorrectId_CategoryId()&#xD;
+[xUnit.net 00:00:02.14]         --- End of stack trace from previous location where exception was thrown ---&#xD;
+[xUnit.net 00:00:02.16]       Assert.Equal() Failure&#xD;
+[xUnit.net 00:00:02.16]       Expected: BadRequest&#xD;
+[xUnit.net 00:00:02.16]       Actual:   NotFound&#xD;
+[xUnit.net 00:00:02.16]       Stack Trace:&#xD;
+[xUnit.net 00:00:02.16]         /repo/src/test/integration/SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests/AssetTests.cs(491,0): at SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAsetTelemetry_Negative_InvalidDatatype()&#xD;
+[xUnit.net 00:00:02.16]         --- End of stack trace from previous location where exception was thrown ---&#xD;
+[xUnit.net 00:00:02.18]       System.ArgumentNullException : Value cannot be null. (Parameter 'source')&#xD;
+[xUnit.net 00:00:02.18]       Stack Trace:&#xD;
+[xUnit.net 00:00:02.18]            at System.Linq.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)&#xD;
+[xUnit.net 00:00:02.18]            at System.Linq.Enumerable.Any[TSource](IEnumerable`1 source)&#xD;
+[xUnit.net 00:00:02.18]         /repo/src/test/integration/SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests/AlertTests.cs(651,0): at SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.DelAbandonAlert_Positive()&#xD;
+[xUnit.net 00:00:02.18]         --- End of stack trace from previous location where exception was thrown ---&#xD;
+[xUnit.net 00:00:02.18]       Assert.Equal() Failure&#xD;
+[xUnit.net 00:00:02.18]       Expected: BadRequest&#xD;
+[xUnit.net 00:00:02.18]       Actual:   NotFound&#xD;
+[xUnit.net 00:00:02.18]       Stack Trace:&#xD;
+[xUnit.net 00:00:02.18]         /repo/src/test/integration/SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests/AssetTests.cs(364,0): at SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAssociatedAssets_Negative_IncorrectAssetID()&#xD;
+[xUnit.net 00:00:02.18]         --- End of stack trace from previous location where exception was thrown ---&#xD;
+[xUnit.net 00:00:02.18]       System.ArgumentNullException : Value cannot be null. (Parameter 'source')&#xD;
+[xUnit.net 00:00:02.18]       Stack Trace:&#xD;
+[xUnit.net 00:00:02.18]            at System.Linq.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)&#xD;
+[xUnit.net 00:00:02.18]            at System.Linq.Enumerable.Any[TSource](IEnumerable`1 source)&#xD;
+[xUnit.net 00:00:02.18]         /repo/src/test/integration/SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests/AlertTests.cs(568,0): at SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlertTypesByAlertTypeId_IncorrectId()&#xD;
+[xUnit.net 00:00:02.18]         --- End of stack trace from previous location where exception was thrown ---&#xD;
+[xUnit.net 00:00:02.20]       Assert.Equal() Failure&#xD;
+[xUnit.net 00:00:02.20]       Expected: BadRequest&#xD;
+[xUnit.net 00:00:02.20]       Actual:   NotFound&#xD;
+[xUnit.net 00:00:02.20]       Stack Trace:&#xD;
+[xUnit.net 00:00:02.20]         /repo/src/test/integration/SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests/AssetTests.cs(383,0): at SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAssociatedAssets_Negative_InvalidDatatype()&#xD;
+[xUnit.net 00:00:02.20]         --- End of stack trace from previous location where exception was thrown ---&#xD;
+[xUnit.net 00:00:02.22]       System.ArgumentNullException : Value cannot be null. (Parameter 'source')&#xD;
+[xUnit.net 00:00:02.22]       Stack Trace:&#xD;
+[xUnit.net 00:00:02.22]            at System.Linq.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)&#xD;
+[xUnit.net 00:00:02.22]            at System.Linq.Enumerable.ElementAt[TSource](IEnumerable`1 source, Int32 index)&#xD;
+[xUnit.net 00:00:02.22]         /repo/src/test/integration/SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests/AssetTests.cs(192,0): at SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAsetByID_Positive()&#xD;
+[xUnit.net 00:00:02.22]         --- End of stack trace from previous location where exception was thrown ---&#xD;
+[xUnit.net 00:00:02.26]       Assert.Equal() Failure&#xD;
+[xUnit.net 00:00:02.26]       Expected: BadRequest&#xD;
+[xUnit.net 00:00:02.26]       Actual:   NotFound&#xD;
+[xUnit.net 00:00:02.26]       Stack Trace:&#xD;
+[xUnit.net 00:00:02.26]         /repo/src/test/integration/SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests/AssetTests.cs(234,0): at SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAssetByID_Negative_InvalidDataTypeForAssetId()&#xD;
+[xUnit.net 00:00:02.26]         --- End of stack trace from previous location where exception was thrown ---&#xD;
+[xUnit.net 00:00:02.26]       Assert.Equal() Failure&#xD;
+[xUnit.net 00:00:02.26]       Expected: BadRequest&#xD;
+[xUnit.net 00:00:02.26]       Actual:   NotFound&#xD;
+[xUnit.net 00:00:02.26]       Stack Trace:&#xD;
+[xUnit.net 00:00:02.26]         /repo/src/test/integration/SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests/AssetTests.cs(510,0): at SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAssetTelemetry_Negative_EmptyParam()&#xD;
+[xUnit.net 00:00:02.26]         --- End of stack trace from previous location where exception was thrown ---&#xD;
+[xUnit.net 00:00:02.27]       System.ArgumentNullException : Value cannot be null. (Parameter 'source')&#xD;
+[xUnit.net 00:00:02.27]       Stack Trace:&#xD;
+[xUnit.net 00:00:02.27]            at System.Linq.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)&#xD;
+[xUnit.net 00:00:02.27]            at System.Linq.Enumerable.ElementAt[TSource](IEnumerable`1 source, Int32 index)&#xD;
+[xUnit.net 00:00:02.27]         /repo/src/test/integration/SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests/AssetTests.cs(446,0): at SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAssetTelemetry_Positive()&#xD;
+[xUnit.net 00:00:02.27]         --- End of stack trace from previous location where exception was thrown ---&#xD;
+[xUnit.net 00:00:02.28]       Assert.Equal() Failure&#xD;
+[xUnit.net 00:00:02.28]       Expected: BadRequest&#xD;
+[xUnit.net 00:00:02.28]       Actual:   NotFound&#xD;
+[xUnit.net 00:00:02.28]       Stack Trace:&#xD;
+[xUnit.net 00:00:02.28]         /repo/src/test/integration/SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests/AssetTests.cs(528,0): at SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAssetTelemetry_Negative_MissingParam()&#xD;
+[xUnit.net 00:00:02.28]         --- End of stack trace from previous location where exception was thrown ---&#xD;
+[xUnit.net 00:00:02.28]       Assert.Equal() Failure&#xD;
+[xUnit.net 00:00:02.28]       Expected: OK&#xD;
+[xUnit.net 00:00:02.28]       Actual:   BadRequest&#xD;
+[xUnit.net 00:00:02.28]       Stack Trace:&#xD;
+[xUnit.net 00:00:02.28]         /repo/src/test/integration/SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests/AlertTests.cs(50,0): at SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlerts_Positive()&#xD;
+[xUnit.net 00:00:02.28]         --- End of stack trace from previous location where exception was thrown ---&#xD;
+[xUnit.net 00:00:02.30]       Assert.Equal() Failure&#xD;
+[xUnit.net 00:00:02.30]       Expected: BadRequest&#xD;
+[xUnit.net 00:00:02.30]       Actual:   NotFound&#xD;
+[xUnit.net 00:00:02.30]       Stack Trace:&#xD;
+[xUnit.net 00:00:02.30]         /repo/src/test/integration/SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests/AssetTests.cs(217,0): at SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAssetByID_Negative_IncorrectAssetID()&#xD;
+[xUnit.net 00:00:02.30]         --- End of stack trace from previous location where exception was thrown ---&#xD;
+[xUnit.net 00:00:02.31]       Assert.Equal() Failure&#xD;
+[xUnit.net 00:00:02.31]       Expected: BadRequest&#xD;
+[xUnit.net 00:00:02.31]       Actual:   NotFound&#xD;
+[xUnit.net 00:00:02.31]       Stack Trace:&#xD;
+[xUnit.net 00:00:02.31]         /repo/src/test/integration/SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests/AssetTests.cs(472,0): at SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAssetTelemetry_Negative_IncorrectAssetID()&#xD;
+[xUnit.net 00:00:02.31]         --- End of stack trace from previous location where exception was thrown ---&#xD;
+[xUnit.net 00:00:02.34]       System.IO.DirectoryNotFoundException : Could not find a part of the path 'C:\Users\Expected\GetAllAssets.json'.&#xD;
+[xUnit.net 00:00:02.34]       Stack Trace:&#xD;
+[xUnit.net 00:00:02.34]            at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)&#xD;
+[xUnit.net 00:00:02.34]            at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)&#xD;
+[xUnit.net 00:00:02.34]            at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)&#xD;
+[xUnit.net 00:00:02.34]            at System.IO.StreamReader.ValidateArgsAndOpenPath(String path, Encoding encoding, Int32 bufferSize)&#xD;
+[xUnit.net 00:00:02.34]            at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks)&#xD;
+[xUnit.net 00:00:02.34]            at System.IO.File.InternalReadAllText(String path, Encoding encoding)&#xD;
+[xUnit.net 00:00:02.34]            at System.IO.File.ReadAllText(String path)&#xD;
+[xUnit.net 00:00:02.34]         /repo/src/test/integration/SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests/AssetTests.cs(102,0): at SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAllAssets_Positive()&#xD;
+[xUnit.net 00:00:02.34]         --- End of stack trace from previous location where exception was thrown ---&#xD;
+[xUnit.net 00:00:02.34]       System.ArgumentNullException : Value cannot be null. (Parameter 'source')&#xD;
+[xUnit.net 00:00:02.35]       Stack Trace:&#xD;
+[xUnit.net 00:00:02.35]            at System.Linq.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)&#xD;
+[xUnit.net 00:00:02.35]            at System.Linq.Enumerable.Any[TSource](IEnumerable`1 source)&#xD;
+[xUnit.net 00:00:02.35]         /repo/src/test/integration/SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests/AlertTests.cs(532,0): at SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlertTypesByAlertTypeId_Positive()&#xD;
+[xUnit.net 00:00:02.35]         --- End of stack trace from previous location where exception was thrown ---&#xD;
+[xUnit.net 00:00:02.36]       Assert.Equal() Failure&#xD;
+[xUnit.net 00:00:02.36]       Expected: OK&#xD;
+[xUnit.net 00:00:02.36]       Actual:   BadRequest&#xD;
+[xUnit.net 00:00:02.36]       Stack Trace:&#xD;
+[xUnit.net 00:00:02.36]         /repo/src/test/integration/SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests/AlertTests.cs(306,0): at SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlertsCountByStatus_Positive()&#xD;
+[xUnit.net 00:00:02.36]         --- End of stack trace from previous location where exception was thrown ---&#xD;
+[xUnit.net 00:00:02.37]       System.ArgumentNullException : Value cannot be null. (Parameter 'source')&#xD;
+[xUnit.net 00:00:02.37]       Stack Trace:&#xD;
+[xUnit.net 00:00:02.37]            at System.Linq.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)&#xD;
+[xUnit.net 00:00:02.37]            at System.Linq.Enumerable.ElementAt[TSource](IEnumerable`1 source, Int32 index)&#xD;
+[xUnit.net 00:00:02.37]         /repo/src/test/integration/SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests/AssetTests.cs(337,0): at SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAssociatedAssets_Positive()&#xD;
+[xUnit.net 00:00:02.37]         --- End of stack trace from previous location where exception was thrown ---&#xD;
+[xUnit.net 00:00:02.38]       Assert.Equal() Failure&#xD;
+[xUnit.net 00:00:02.38]       Expected: OK&#xD;
+[xUnit.net 00:00:02.38]       Actual:   BadRequest&#xD;
+[xUnit.net 00:00:02.38]       Stack Trace:&#xD;
+[xUnit.net 00:00:02.38]         /repo/src/test/integration/SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests/AssetTests.cs(292,0): at SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAssetTypeStatusCount_Positive()&#xD;
+[xUnit.net 00:00:02.38]         --- End of stack trace from previous location where exception was thrown ---&#xD;
+[xUnit.net 00:00:02.40]       Assert.Equal() Failure&#xD;
+[xUnit.net 00:00:02.40]       Expected: OK&#xD;
+[xUnit.net 00:00:02.40]       Actual:   BadRequest&#xD;
+[xUnit.net 00:00:02.40]       Stack Trace:&#xD;
+[xUnit.net 00:00:02.40]         /repo/src/test/integration/SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests/AlertTests.cs(225,0): at SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlertsCountByPriority_Positive()&#xD;
+[xUnit.net 00:00:02.40]         --- End of stack trace from previous location where exception was thrown ---&#xD;
+[xUnit.net 00:00:02.41]       System.IO.DirectoryNotFoundException : Could not find a part of the path 'C:\Users\Expected\AlertCategories.json'.&#xD;
+[xUnit.net 00:00:02.41]       Stack Trace:&#xD;
+[xUnit.net 00:00:02.41]            at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)&#xD;
+[xUnit.net 00:00:02.41]            at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)&#xD;
+[xUnit.net 00:00:02.41]            at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)&#xD;
+[xUnit.net 00:00:02.41]            at System.IO.StreamReader.ValidateArgsAndOpenPath(String path, Encoding encoding, Int32 bufferSize)&#xD;
+[xUnit.net 00:00:02.41]            at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks)&#xD;
+[xUnit.net 00:00:02.41]            at System.IO.File.InternalReadAllText(String path, Encoding encoding)&#xD;
+[xUnit.net 00:00:02.41]            at System.IO.File.ReadAllText(String path)&#xD;
+[xUnit.net 00:00:02.41]         /repo/src/test/integration/SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests/AlertTests.cs(388,0): at SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlertsCategories_Positive()&#xD;
+[xUnit.net 00:00:02.41]         --- End of stack trace from previous location where exception was thrown ---&#xD;
+[xUnit.net 00:00:02.42]       System.ArgumentNullException : Value cannot be null. (Parameter 'source')&#xD;
+[xUnit.net 00:00:02.42]       Stack Trace:&#xD;
+[xUnit.net 00:00:02.42]            at System.Linq.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)&#xD;
+[xUnit.net 00:00:02.42]            at System.Linq.Enumerable.Any[TSource](IEnumerable`1 source)&#xD;
+[xUnit.net 00:00:02.42]         /repo/src/test/integration/SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests/AlertTests.cs(424,0): at SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlertTypesByCategory_Positive()&#xD;
+[xUnit.net 00:00:02.42]         --- End of stack trace from previous location where exception was thrown ---&#xD;
+[xUnit.net 00:00:02.48]       Assert.Equal() Failure&#xD;
+[xUnit.net 00:00:02.48]       Expected: NoContent&#xD;
+[xUnit.net 00:00:02.48]       Actual:   NotFound&#xD;
+[xUnit.net 00:00:02.48]       Stack Trace:&#xD;
+[xUnit.net 00:00:02.48]         /repo/src/test/integration/SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests/AlertTests.cs(183,0): at SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlertById_Incorrect_AlertId()&#xD;
+[xUnit.net 00:00:02.48]         --- End of stack trace from previous location where exception was thrown ---&#xD;
+[xUnit.net 00:00:02.53]       System.ArgumentNullException : Value cannot be null. (Parameter 'source')&#xD;
+[xUnit.net 00:00:02.53]       Stack Trace:&#xD;
+[xUnit.net 00:00:02.53]            at System.Linq.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)&#xD;
+[xUnit.net 00:00:02.53]            at System.Linq.Enumerable.Any[TSource](IEnumerable`1 source)&#xD;
+[xUnit.net 00:00:02.53]         /repo/src/test/integration/SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests/AlertTests.cs(153,0): at SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlertById_Positive()&#xD;
+[xUnit.net 00:00:02.53]         --- End of stack trace from previous location where exception was thrown ---&#xD;
+[xUnit.net 00:00:02.55]       System.ArgumentNullException : Value cannot be null. (Parameter 'source')&#xD;
+[xUnit.net 00:00:02.55]       Stack Trace:&#xD;
+[xUnit.net 00:00:02.55]            at System.Linq.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)&#xD;
+[xUnit.net 00:00:02.55]            at System.Linq.Enumerable.Any[TSource](IEnumerable`1 source)&#xD;
+[xUnit.net 00:00:02.55]         /repo/src/test/integration/SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests/AlertTests.cs(96,0): at SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlerts_Incorrect_JurId()&#xD;
+[xUnit.net 00:00:02.55]         --- End of stack trace from previous location where exception was thrown ---&#xD;
+[xUnit.net 00:00:02.55]   Finished:    SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests&#xD;
+</StdOut>
+    </Output>
+    <RunInfos>
+      <RunInfo computerName="smcty-UATAgent" outcome="Error" timestamp="2020-08-04T05:55:30.7264952+00:00">
+        <Text>[xUnit.net 00:00:02.13]     SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAllAssetTypes_Positive [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="smcty-UATAgent" outcome="Error" timestamp="2020-08-04T05:55:30.7305940+00:00">
+        <Text>[xUnit.net 00:00:02.14]     SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlertTypesByCategory_IncorrectId_CategoryId [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="smcty-UATAgent" outcome="Error" timestamp="2020-08-04T05:55:30.7523623+00:00">
+        <Text>[xUnit.net 00:00:02.16]     SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAsetTelemetry_Negative_InvalidDatatype [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="smcty-UATAgent" outcome="Error" timestamp="2020-08-04T05:55:30.8327349+00:00">
+        <Text>[xUnit.net 00:00:02.18]     SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.DelAbandonAlert_Positive [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="smcty-UATAgent" outcome="Error" timestamp="2020-08-04T05:55:30.8341224+00:00">
+        <Text>[xUnit.net 00:00:02.18]     SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAssociatedAssets_Negative_IncorrectAssetID [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="smcty-UATAgent" outcome="Error" timestamp="2020-08-04T05:55:30.8354690+00:00">
+        <Text>[xUnit.net 00:00:02.18]     SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlertTypesByAlertTypeId_IncorrectId [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="smcty-UATAgent" outcome="Error" timestamp="2020-08-04T05:55:30.8382913+00:00">
+        <Text>[xUnit.net 00:00:02.20]     SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAssociatedAssets_Negative_InvalidDatatype [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="smcty-UATAgent" outcome="Error" timestamp="2020-08-04T05:55:30.8395923+00:00">
+        <Text>[xUnit.net 00:00:02.22]     SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAsetByID_Positive [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="smcty-UATAgent" outcome="Error" timestamp="2020-08-04T05:55:30.8909011+00:00">
+        <Text>[xUnit.net 00:00:02.26]     SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAssetByID_Negative_InvalidDataTypeForAssetId [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="smcty-UATAgent" outcome="Error" timestamp="2020-08-04T05:55:30.8928308+00:00">
+        <Text>[xUnit.net 00:00:02.26]     SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAssetTelemetry_Negative_EmptyParam [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="smcty-UATAgent" outcome="Error" timestamp="2020-08-04T05:55:30.8940227+00:00">
+        <Text>[xUnit.net 00:00:02.27]     SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAssetTelemetry_Positive [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="smcty-UATAgent" outcome="Error" timestamp="2020-08-04T05:55:30.8951966+00:00">
+        <Text>[xUnit.net 00:00:02.28]     SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAssetTelemetry_Negative_MissingParam [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="smcty-UATAgent" outcome="Error" timestamp="2020-08-04T05:55:30.8963578+00:00">
+        <Text>[xUnit.net 00:00:02.28]     SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlerts_Positive [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="smcty-UATAgent" outcome="Error" timestamp="2020-08-04T05:55:30.9423493+00:00">
+        <Text>[xUnit.net 00:00:02.30]     SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAssetByID_Negative_IncorrectAssetID [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="smcty-UATAgent" outcome="Error" timestamp="2020-08-04T05:55:30.9439116+00:00">
+        <Text>[xUnit.net 00:00:02.31]     SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAssetTelemetry_Negative_IncorrectAssetID [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="smcty-UATAgent" outcome="Error" timestamp="2020-08-04T05:55:30.9453469+00:00">
+        <Text>[xUnit.net 00:00:02.34]     SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAllAssets_Positive [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="smcty-UATAgent" outcome="Error" timestamp="2020-08-04T05:55:30.9465954+00:00">
+        <Text>[xUnit.net 00:00:02.34]     SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlertTypesByAlertTypeId_Positive [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="smcty-UATAgent" outcome="Error" timestamp="2020-08-04T05:55:31.0812023+00:00">
+        <Text>[xUnit.net 00:00:02.36]     SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlertsCountByStatus_Positive [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="smcty-UATAgent" outcome="Error" timestamp="2020-08-04T05:55:31.0846299+00:00">
+        <Text>[xUnit.net 00:00:02.37]     SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAssociatedAssets_Positive [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="smcty-UATAgent" outcome="Error" timestamp="2020-08-04T05:55:31.0860176+00:00">
+        <Text>[xUnit.net 00:00:02.38]     SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AssetTests.GetAssetTypeStatusCount_Positive [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="smcty-UATAgent" outcome="Error" timestamp="2020-08-04T05:55:31.0875340+00:00">
+        <Text>[xUnit.net 00:00:02.40]     SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlertsCountByPriority_Positive [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="smcty-UATAgent" outcome="Error" timestamp="2020-08-04T05:55:31.0888696+00:00">
+        <Text>[xUnit.net 00:00:02.41]     SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlertsCategories_Positive [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="smcty-UATAgent" outcome="Error" timestamp="2020-08-04T05:55:31.1496525+00:00">
+        <Text>[xUnit.net 00:00:02.42]     SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlertTypesByCategory_Positive [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="smcty-UATAgent" outcome="Error" timestamp="2020-08-04T05:55:31.1509145+00:00">
+        <Text>[xUnit.net 00:00:02.48]     SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlertById_Incorrect_AlertId [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="smcty-UATAgent" outcome="Error" timestamp="2020-08-04T05:55:31.1520870+00:00">
+        <Text>[xUnit.net 00:00:02.53]     SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlertById_Positive [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="smcty-UATAgent" outcome="Error" timestamp="2020-08-04T05:55:31.1533627+00:00">
+        <Text>[xUnit.net 00:00:02.55]     SmartCitiesCommandCenter.SmCty.System.TestAutomation.Api.Web.Integration.Tests.AlertTests.GetAlerts_Incorrect_JurId [FAIL]</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+</TestRun>

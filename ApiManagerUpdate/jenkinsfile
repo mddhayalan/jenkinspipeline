@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 BuildNumber = env.BUILD_NUMBER
 pipeline {
-    agent { label '!master' }
+    agent { label 'master' }
     options {
         buildDiscarder(logRotator(daysToKeepStr: '18'))
     }
@@ -17,73 +17,82 @@ pipeline {
             steps {
                  cleanWs()
                 ExportAPI("new-env")
-                CopyFiles2Share()
-                //archiveArtifacts artifacts: "${BUILD_NUMBER}/*.zip", onlyIfSuccessful: true
+                // CopyFiles2Share()
             }
             post {
                 always {
                     stash(name: "API", includes: '**/*.zip')
-                    //archiveArtifacts artifacts: '**/*.zip', onlyIfSuccessful: true
                 }
             }
         }
-        parallel
+        stage('Update and Import APIs')
         {
-            stage('Import APIs to ST API Manager') 
+            parallel
             {
-                environment {
-                    APIURL = 'qa.smcty.honeywell.com'
-                    JENKINSWORKSPACE = "${WORKSPACE}"
-                    BUILDNUMBER = "${BuildNumber}"
+                stage('Import APIs to ST API Manager') 
+                {
+                    environment {
+                        APIURL = 'qa.smcty.honeywell.com'
+                        JENKINSWORKSPACE = "${WORKSPACE}"
+                        BUILDNUMBER = "${BuildNumber}"
+                        APIENV = "QA-env1"
+                    }
+                    agent { label 'testapimanager' }
+                    options {
+                    timeout(time: 15, unit: 'MINUTES')
+                    timestamps()
+                    }
+                    steps {
+                        cleanWs()
+                        unstash("API")
+                        UpdateAPIs()
+                        ImportAPIs()
+                        UpdateCorsSettings()
+                    }
                 }
-                agent { label 'testapimanager' }
-                options {
-                timeout(time: 15, unit: 'MINUTES')
-                timestamps()
-                }
-                steps {
-                    cleanWs()
-                    unstash("API")
-                    UpdateAPIs()
-                }
-            }
 
-            stage('Import APIs to Demo API Manager') 
-            {
-                environment {
-                    APIURL = 'cs.smcty.honeywell.com'
-                    JENKINSWORKSPACE = "${WORKSPACE}"
-                    BUILDNUMBER = "${BuildNumber}"
+                stage('Import APIs to Demo API Manager') 
+                {
+                    environment {
+                        APIURL = 'demo.smcty.honeywell.com'
+                        JENKINSWORKSPACE = "${WORKSPACE}"
+                        BUILDNUMBER = "${BuildNumber}"
+                        APIENV = "DemoEnv"
+                    }
+                    agent { label 'demoapimanager' }
+                    options {
+                    timeout(time: 15, unit: 'MINUTES')
+                    timestamps()
+                    }
+                    steps {
+                        cleanWs()
+                        unstash("API")
+                        UpdateAPIs()
+                        ImportAPIs()
+                        UpdateCorsSettings()
+                    }
                 }
-                agent { label 'demoapimanager' }
-                options {
-                timeout(time: 15, unit: 'MINUTES')
-                timestamps()
-                }
-                steps {
-                    cleanWs()
-                    unstash("API")
-                    UpdateAPIs()
-                    //ImportAPIs()
-                }
-            }
 
-            stage('Import APIs to CS API Manager') 
-            {
-                environment {
-                    APIURL = 'cs.smcty.honeywell.com'
-                    JENKINSWORKSPACE = "${WORKSPACE}"
-                    BUILDNUMBER = "${BuildNumber}"
-                }
-                agent { label 'csapimanager' }
-                options {
-                timeout(time: 15, unit: 'MINUTES')
-                timestamps()
-                }
-                steps {
-                    cleanWs()
-                    unstash("API")
-                    UpdateAPIs()
+                stage('Import APIs to CS API Manager') 
+                {
+                    environment {
+                        APIURL = 'cs.smcty.honeywell.com'
+                        JENKINSWORKSPACE = "${WORKSPACE}"
+                        BUILDNUMBER = "${BuildNumber}"
+                        APIENV = "QA-env1"
+                    }
+                    agent { label 'csapimanager' }
+                    options {
+                    timeout(time: 15, unit: 'MINUTES')
+                    timestamps()
+                    }
+                    steps {
+                        cleanWs()
+                        unstash("API")
+                        UpdateAPIs()
+                        ImportAPIs()
+                        UpdateCorsSettings()
+                    }
                 }
             }
         }        
@@ -94,23 +103,25 @@ def RunBatch(String command) {
     bat returnStatus: false, script:"${command}"
 }
 
-def ExportAPI(String environmentName)
-{
+def ExportAPI(String environmentName){
     powershell label: 'Export APIs from Dev',
-                script: """Set-Location "C:\\tools\\apictl"
-                        .\\apictl login ${environmentName} -u admin -p admin -k
+            script: """Set-Location "C:\\tools\\apictl"
+                    .\\apictl login ${environmentName} -u admin -p admin -k
 
-                        .\\apictl export-api -n AlertsAPI -v v1 -r admin -e ${environmentName} -k
-                        .\\apictl export-api -n AssetsAPI -v v1 -r admin -e ${environmentName} -k
-                        .\\apictl export-api -n IncidentsAPI -v v1 -r admin -e ${environmentName} -k
-                        .\\apictl export-api -n DVMOrchestrationAPI -v v1 -r admin -e ${environmentName} -k
-                        .\\apictl export-api -n NotificationHub -v v1 -r admin -e ${environmentName} -k
-                        .\\apictl export-api -n SitesAPI -v v1 -r admin -e ${environmentName} -k
-                        .\\apictl export-api -n MapsAPI -v v1 -r admin -e ${environmentName} -k"""
+                    .\\apictl export-api -n AlertsAPI -v v1 -r admin -e ${environmentName} -k
+                    .\\apictl export-api -n AssetsAPI -v v1 -r admin -e ${environmentName} -k
+                    .\\apictl export-api -n IncidentsAPI -v v1 -r admin -e ${environmentName} -k
+                    .\\apictl export-api -n DVMOrchestrationAPI -v v1 -r admin -e ${environmentName} -k
+                    .\\apictl export-api -n NotificationHub -v v1 -r admin -e ${environmentName} -k
+                    .\\apictl export-api -n SitesAPI -v v1 -r admin -e ${environmentName} -k
+                    .\\apictl export-api -n MapsAPI -v v1 -r admin -e ${environmentName} -k"""
 }
 
-def CopyFiles2Share()
-{
+def ImportAPIs(){
+    powershell "C:\\Jenkins\\Workspace\\Scripts\\import.api.ps1"
+}
+
+def CopyFiles2Share(){
     powershell label: 'Copy the imported Files to share',
     script: """ New-Item "${WORKSPACE}\\${BUILD_NUMBER}" -ItemType Directory 
                 Get-ChildItem -Path "C:\\tools\\apictl" -Filter "*.zip" -File -Recurse | Copy-Item -Destination "${WORKSPACE}\\${BUILD_NUMBER}" """
@@ -118,4 +129,8 @@ def CopyFiles2Share()
 
 def UpdateAPIs() {
     powershell "C:\\Jenkins\\Workspace\\Scripts\\api.update.ps1"
+}
+
+def UpdateCorsSettings() {
+    powershell "C:\\Jenkins\\Workspace\\Scripts\\update.cors.settings.ps1"
 }
