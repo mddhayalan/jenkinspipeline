@@ -1,7 +1,10 @@
 #!/usr/bin/env groovy
+//Author: Dheenadhayalan M
+//Pipeline for promoting the apis from dev environment to ST, Demo, CS environment
+//Also inclde the API manager update for the respective environments
 BuildNumber = env.BUILD_NUMBER
 pipeline {
-    agent { label 'master' }
+    agent none
     options {
         buildDiscarder(logRotator(daysToKeepStr: '18'))
     }
@@ -17,7 +20,7 @@ pipeline {
             steps {
                  cleanWs()
                 ExportAPI("new-env")
-                // CopyFiles2Share()
+                CopyFiles2Share()
             }
             post {
                 always {
@@ -25,12 +28,45 @@ pipeline {
                 }
             }
         }
+        stage("Promote Latest Dev to System Test")
+        {
+            agent { label 'master' }
+            options {
+               timeout(time: 30, unit: 'MINUTES')
+               timestamps()
+            }
+            steps {
+                PromoteAllProjects('Test', 'SysTestTenant')
+            }
+        }
+        stage("Promote Latest Dev to Demo")
+        {
+            agent { label 'master' }
+            options {
+               timeout(time: 30, unit: 'MINUTES')
+               timestamps()
+            }
+            steps {
+                PromoteAllProjects('Demo', '')
+            }
+        }
+        stage("Promote Latest Dev to CyberSecurity")
+        {
+            agent { label 'master' }
+            options {
+               timeout(time: 30, unit: 'MINUTES')
+               timestamps()
+            }
+            steps {
+                PromoteAllProjects('CyberSecurity', '')
+            }
+        }
         stage('Update and Import APIs')
         {
             parallel
             {
                 stage('Import APIs to ST API Manager') 
-                {
+                {   
                     environment {
                         APIURL = 'qa.smcty.honeywell.com'
                         JENKINSWORKSPACE = "${WORKSPACE}"
@@ -47,7 +83,7 @@ pipeline {
                         unstash("API")
                         UpdateAPIs()
                         ImportAPIs()
-                        UpdateCorsSettings()
+                        // UpdateCorsSettings()
                     }
                 }
 
@@ -69,7 +105,7 @@ pipeline {
                         unstash("API")
                         UpdateAPIs()
                         ImportAPIs()
-                        UpdateCorsSettings()
+                        // UpdateCorsSettings()
                     }
                 }
 
@@ -91,7 +127,7 @@ pipeline {
                         unstash("API")
                         UpdateAPIs()
                         ImportAPIs()
-                        UpdateCorsSettings()
+                        //UpdateCorsSettings()
                     }
                 }
             }
@@ -133,4 +169,24 @@ def UpdateAPIs() {
 
 def UpdateCorsSettings() {
     powershell "C:\\Jenkins\\Workspace\\Scripts\\update.cors.settings.ps1"
+}
+
+def PromoteAllProjects(String envName, String tenant){
+    PromoteProject('smcty.dvm.orchestration', "${tenant}" , "${envName}")
+    PromoteProject('Smcty-Alerts', "${tenant}" , "${envName}")
+    PromoteProject('Smcty-Assets', "${tenant}" , "${envName}")
+    PromoteProject('Smcty-Incidents', "${tenant}" , "${envName}")
+    PromoteProject('Smcty-Maps', "${tenant}" , "${envName}")
+    PromoteProject('Smcty-NotificationClient', "${tenant}" , "${envName}")
+    PromoteProject('Smcty-NotificationHub', "${tenant}" , "${envName}")
+    // PromoteProject('Smcty-Samlsp', "${tenant}" , "${envName}")
+    PromoteProject('Smcty-Sites', "${tenant}" , "${envName}")
+    PromoteProject('Smcty-WebUI', "${tenant}" , "${envName}")
+}
+
+def PromoteProject(String projectName, String tenant, String envName)
+{
+    octopusDeployRelease deploymentTimeout: '', environment: "${envName}", project: "${projectName}", 
+    releaseVersion: 'latest', serverId: 'Smcty OctopusDeploy', spaceId: 'Spaces-1', tenant: "${tenant}", 
+    toolId: 'Default', waitForDeployment: true
 }
